@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Marilena Avram, Laboratorul Familiei</title>
+<meta name="description" content="Laboratorul Familiei: 6 săptămâni de coaching cu Marilena Avram, pentru mama care cedează ca să fie pace acasă. Prima discuție, de 30 de minute, este gratuită.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+<style>img{max-width:100%}[hidden]{display:none!important}
+:root{color-scheme:light;--grey:#CDD2D6;--white:#FFFFFF;--ink:#121212;--teal:#2F7F92;--gl:max(20px,env(safe-area-inset-left,0px));--gr:max(20px,env(safe-area-inset-right,0px));--sec:clamp(104px,11vw,176px)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--white);color:var(--ink);font-family:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:18px;font-weight:450;line-height:1.45;font-stretch:100%;-webkit-font-smoothing:antialiased;overflow-x:clip}
+h1,h2,h3,p,ol,ul,li,blockquote,figure{margin:0;padding:0}
+ol,ul{list-style:none}
+p,h2,h3,summary,blockquote{text-wrap:pretty}
+img,video{display:block;max-width:100%;height:auto}
+a{color:inherit}
+button{font:inherit;color:inherit}
+.nw{white-space:nowrap}
+.lab{font-size:13px;font-weight:500;line-height:1.3}
+.caps{font-weight:800;text-transform:uppercase;letter-spacing:-.035em;line-height:.9}
+.stmt{font-weight:550;font-size:clamp(30px,3.9vw,56px);line-height:1.08;letter-spacing:-.024em}
+.pill{display:inline-flex;align-items:center;justify-content:center;min-height:54px;background:var(--teal);color:#fff;text-decoration:none;font-weight:700;font-size:17px;line-height:1.1;padding:0 26px;border-radius:999px;white-space:nowrap;transition:transform .25s ease}
+.pill:hover{transform:translateY(-2px)}
+.pill-w{background:#fff;color:var(--ink)}
+.pill-k{background:var(--ink);color:#fff}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.tlink{display:inline-block;padding-block:10px;margin-block:-10px;font-weight:650;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.24em}
+.tlink:hover{text-decoration-thickness:3px}
+@media (max-width:359px){.pill{font-size:15px;padding:0 18px}}
+@media (max-width:899px){.stmt{line-height:1.14}}
+
+/* hero */
+.hero{position:relative}
+.nav{position:absolute;z-index:6;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:6px var(--gr) 0 var(--gl);font-size:15px;font-weight:550;line-height:1.2}
+.nav a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none}
+.nav a:hover{text-decoration:underline;text-underline-offset:.25em}
+.nav .nm{font-weight:700}
+.nav-r{display:none;align-items:center;gap:40px}
+.nav .links a{display:inline-flex}
+.nav .cta{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:.25em}
+.nav .links a{min-width:44px;justify-content:center}
+.mlinks{display:none}
+@media (max-width:899px) and (min-width:360px){
+  .mlinks{display:inline}
+  .mlinks a{min-width:44px;justify-content:center}
+  .nav .tel{display:none}
+}
+.stage{position:relative;overflow:hidden;background:var(--grey)}
+.h1{position:absolute;z-index:1;left:0;right:0}
+.h1 span{display:block;white-space:nowrap}
+.cut{position:absolute;z-index:2;max-width:none}
+.hero-copy .promise{font-weight:550;letter-spacing:-.022em;line-height:1.08}
+.hero-copy .for{font-weight:450}
+.hero-copy .calm{font-size:15px;line-height:1.35}
+
+@media (min-width:900px){
+  .nav-r{display:flex}
+  .nav .tel{display:none}
+}
+@media (min-width:900px) and (min-height:520px){
+  .hero{--u:min(1vw,1.6svh);height:calc(var(--u)*62.5);background:var(--grey);overflow:hidden}
+  .nav{padding-top:10px;padding-left:max(var(--gl),calc(50% - var(--u)*48.6));padding-right:max(var(--gr),calc(50% - var(--u)*48.6))}
+  .stage{position:absolute;left:50%;top:0;bottom:0;width:calc(var(--u)*100);transform:translateX(-50%);background:none;overflow:visible}
+  .h1{top:calc(var(--u)*8.8);font-size:calc(var(--u)*12.7)}
+  .h1 .l1{padding-left:calc(var(--u)*23.5)}
+  .h1 .l2{padding-left:calc(var(--u)*1.1)}
+  .cut{right:calc(var(--u)*1.6);bottom:calc(var(--u)*-6);height:calc(var(--u)*58.75);width:auto}
+  .hero-copy{position:absolute;z-index:3;left:max(var(--gl),calc(50% - var(--u)*48.6));top:calc(var(--u)*18.87 - 13.8px);bottom:calc(var(--u)*3.6);width:max(calc(var(--u)*37),440px);display:flex;flex-direction:column;align-items:flex-start;pointer-events:none}
+  .hero-copy>*{pointer-events:auto}
+  .hero-copy .lab{font-size:14px;line-height:1.3;max-width:calc(var(--u)*23.5 - 36px);transform:translateY(calc(1.3em - 100%))}
+  .hero-copy .promise{font-size:calc(var(--u)*2.7);margin-top:auto}
+  .hero-copy .for{font-size:max(18px,calc(var(--u)*1.32));margin-top:12px;max-width:27em}
+  .hero-copy .pill{margin-top:26px}
+  .hero-copy .calm{margin-top:14px;max-width:30em}
+}
+@media (max-width:899px),(max-height:519px){
+  .hero{--m:max(2.6px,min(1vw,calc((100svh - 262px) / 150)));--h1t:max(46px,calc(var(--m)*13.5))}
+  .nav .tel{font-weight:550}
+  .stage{height:calc(var(--m)*149)}
+  .h1{top:var(--h1t);font-size:calc(var(--m)*18)}
+  .h1 .l1{padding-left:calc(50% - var(--m)*31.8)}
+  .h1 .l2{padding-left:calc(50% - var(--m)*45)}
+  .cut{left:calc(50% - var(--m)*33.2);width:calc(var(--m)*112);height:auto;bottom:calc(var(--m)*-5 - (var(--h1t) - var(--m)*13.5))}
+  .hero-copy{padding:22px var(--gr) 64px max(var(--gl),calc(50% - var(--m)*45))}
+  .hero-copy .lab{display:none}
+  .hero-copy .promise{font-size:33px}
+  .hero-copy .for{font-size:17px;line-height:1.4;margin-top:8px;max-width:24em}
+  .hero-copy .pill{margin-top:18px}
+  .hero-copy .calm{margin-top:12px}
+}
+
+/* film frame */
+.film{background:var(--white)}
+.frame{padding:0}
+.frame-in{position:relative;overflow:hidden;background:var(--ink);color:#fff}
+.ft{color:#fff;pointer-events:none;text-shadow:0 0 .14em rgba(18,18,18,.3),0 0 .5em rgba(18,18,18,.2)}
+.ft span{display:block;white-space:nowrap}
+.fhead{color:#fff}
+.tag{font-weight:550;letter-spacing:-.018em;line-height:1.16}
+.play{display:inline-block;color:#fff;font-weight:600;line-height:1.3;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.22em;outline:0}
+.play:hover{text-decoration-thickness:3px}
+.play::after{content:"";position:absolute;inset:0;z-index:3}
+.play:focus-visible::after{outline:3px solid #fff;outline-offset:-12px}
+.pmark{position:absolute;z-index:2;display:flex;align-items:center;gap:10px;min-height:44px;padding:0 20px 0 18px;border-radius:999px;background:var(--ink);color:#fff;font-weight:700;font-size:16px;line-height:1;pointer-events:none}
+.pmark::before{content:"";width:11px;height:13px;background:#fff;clip-path:polygon(0 0,100% 50%,0 100%)}
+@media (min-width:760px),(min-width:560px) and (orientation:landscape){
+  .film .frame-in{height:min(100svh,900px);--pw:min(62%,calc(min(100svh,900px) * .8))}
+  .film .poster{position:absolute;top:0;right:0;left:auto;height:100%;width:var(--pw);max-width:none;object-fit:cover;object-position:50% 18%}
+  .fhead{padding:28px 24px 0 max(24px,calc(env(safe-area-inset-left,0px) + 12px));max-width:calc(100% - var(--pw) - 32px)}
+  .tag{font-size:clamp(26px,2.9vw,42px);max-width:11em}
+  .play{margin-top:22px;font-size:clamp(17px,1.35vw,20px)}
+  .pmark{top:24px;right:max(24px,calc(env(safe-area-inset-right,0px) + 12px))}
+  .ft{position:absolute;z-index:2;left:max(16px,calc(env(safe-area-inset-left,0px) + 8px));right:0;bottom:7%;font-size:min(9.6vw,calc(100svh * .155),140px);line-height:.97}
+  .ft .t2,.ft .t3{display:inline}
+}
+@media (max-width:559px),(max-width:759px) and (orientation:portrait){
+  .film .frame-in{display:grid;grid-template-columns:minmax(0,1fr)}
+  .film .poster{grid-area:1/1;width:100%;aspect-ratio:2/3;object-fit:cover;object-position:50% 90%}
+  .ft{grid-area:1/1;align-self:end;position:relative;z-index:2;padding:0 16px 18px 12px;font-size:15.4vw;line-height:.94;text-align:right}
+  .pmark{top:14px;left:max(12px,env(safe-area-inset-left,0px))}
+  .fhead{grid-area:2/1;padding:18px 12px 24px}
+  .tag{font-size:21px}
+  .play{margin-top:12px;font-size:17px}
+}
+
+/* mothers wall */
+.wall{padding:clamp(96px,10vw,160px) var(--gr) clamp(96px,9vw,150px) var(--gl)}
+.wall-head{display:flex;gap:24px;align-items:baseline}
+.wall-head h2{font-size:clamp(20px,1.8vw,26px);font-weight:600;letter-spacing:-.01em;line-height:1.2}
+.qs{margin-top:clamp(56px,7vw,112px)}
+.q{font-weight:500;font-size:clamp(30px,4.2vw,62px);line-height:1.08;letter-spacing:-.025em;text-indent:-.4em}
+.q+.q{margin-top:clamp(56px,7.5vw,120px)}
+.q1{margin-left:.4em}
+.q2{margin-left:44%}
+.q3{margin-left:7%}
+.q4{margin-left:33%;font-size:clamp(40px,6.6vw,100px);line-height:1.02;letter-spacing:-.035em;font-weight:550}
+.wall-end{margin-left:33%;margin-top:clamp(56px,6vw,96px);font-size:clamp(20px,1.8vw,26px);font-weight:600;line-height:1.3;letter-spacing:-.01em;max-width:22em}
+.wall-end span{display:block}
+@media (min-width:900px){
+  .q1,.q2,.q3{line-height:1.14}
+}
+@media (max-width:899px){
+  .wall-head{flex-direction:column;gap:10px}
+  .q{font-size:30px;line-height:1.12}
+  .bd{display:none}
+  .q2{margin-left:16%}
+  .q3{margin-left:6%}
+  .q4{margin-left:10%;font-size:44px;line-height:1.04}
+  .wall-end{margin-left:10%}
+}
+
+/* about */
+.about{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:20px;padding:0 var(--gr) clamp(112px,12vw,190px) 0;align-items:end}
+.about-fig{grid-column:1 / span 7;position:relative;isolation:isolate;background:var(--ink);height:min(100svh,960px);min-height:620px;overflow:hidden}
+.about-fig img{position:absolute;right:0;bottom:0;height:86%;width:auto;max-width:none;mix-blend-mode:lighten}
+.about-h{position:absolute;z-index:2;left:var(--gl);top:clamp(32px,4vw,60px);color:#fff;font-size:clamp(30px,3.6vw,54px)}
+.about-h span{display:block}
+.about-h span+span{display:inline}
+.about-t{grid-column:9 / span 4;align-self:stretch;display:flex;flex-direction:column;padding-top:calc(clamp(32px,4vw,60px) + 8px)}
+.about-t p{font-size:20px}
+.about-t p+p{margin-top:16px}
+.facts{margin-top:auto;padding-top:36px}
+.facts li{font-size:17px;font-weight:650;line-height:1.35}
+.facts li+li{margin-top:6px}
+@media (max-width:899px){
+  .about{display:block;padding-right:0}
+  .about-fig{height:auto;min-height:0;padding-top:30px}
+  .about-fig img{position:relative;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 0;margin-top:2px}
+  .about-h{position:relative;top:auto;left:auto;padding:0 var(--gr) 0 var(--gl);font-size:31px;line-height:1.12}
+  .about-t{padding:32px var(--gr) 0 var(--gl)}
+  .about-t p{font-size:18px}
+}
+
+/* program */
+.prog{background:var(--grey);overflow:clip}
+.prog-stage{position:relative}
+.prog-head{position:sticky;top:0;height:min(100svh,960px);display:flex;flex-direction:column;justify-content:center;padding:0 var(--gr) 0 var(--gl)}
+.prog-title{font-size:clamp(40px,11.2vw,168px);margin-top:16px}
+.prog-title span{display:block;white-space:nowrap}
+.prog-title .l2{padding-left:calc((100% - 220px) * 4 / 12 + 80px + .08em)}
+.prog-head .lab{font-size:15px;font-weight:600}
+.prog-head .terms{margin-top:clamp(28px,3vw,44px);font-size:clamp(18px,1.5vw,21px);font-weight:550;line-height:1.38;max-width:min(21em,calc((100% - 220px) * 5 / 12 + 76px))}
+.cards{position:relative;z-index:2;display:flow-root;padding:0 var(--gr) 0 var(--gl);--top:96px;--step:88px;--gap:min(16svh,150px);--hold:min(30svh,260px)}
+.cards::after{content:"";display:block;height:var(--hold)}
+.card{position:sticky;top:calc(var(--top) + var(--i) * var(--step));display:flex;flex-direction:column;margin:0 0 calc(var(--gap) + (2 - var(--i)) * var(--step)) auto;width:calc((100% - 220px) * 7 / 12 + 120px);min-height:var(--ch);background:var(--white);padding:0 36px 36px;--ch:min(490px,calc(100svh - 290px))}
+.card:nth-child(2){background:var(--ink);color:#fff}
+.card-top{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:22px;padding-top:20px}
+.card-n{flex:none;font-weight:800;font-size:60px;line-height:.9;letter-spacing:-.04em}
+.card h3{flex:1 1 0;min-width:0;font-weight:700;font-size:clamp(26px,2.5vw,38px);line-height:1.08;letter-spacing:-.025em}
+.card-w{flex:none;font-size:16px;font-weight:600;line-height:1.3}
+.weeks{margin-top:auto;padding-top:40px;max-width:34em}
+.weeks li{font-size:18px;line-height:1.42}
+.weeks li+li{margin-top:16px}
+.weeks b{display:block;font-size:20px;font-weight:700;line-height:1.25;letter-spacing:-.01em;margin-bottom:3px}
+.prog-after{padding:clamp(64px,7vw,110px) var(--gr) clamp(96px,10vw,160px) var(--gl)}
+.prog-after .out{font-size:clamp(26px,3vw,44px);font-weight:550;line-height:1.12;letter-spacing:-.022em;max-width:19em}
+.prog-after .act{margin-top:clamp(32px,3vw,44px);display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px}
+.prog-after .note{font-size:16px;line-height:1.35}
+@media (max-width:899px){
+  .prog-head{justify-content:flex-start;padding-top:36px;height:min(72svh,620px)}
+  .prog-title{font-size:min(15vw,58px);font-stretch:75%;word-spacing:.12em;margin-top:10px}
+  .prog-title .l2{padding-left:1.6em}
+  .prog-head .terms{margin-top:22px;font-size:17px;max-width:20em}
+  .cards{--top:calc(36px + 30px + min(15vw,58px) * 1.8 + 22px);--step:60px;--gap:min(14svh,120px);--hold:min(22svh,180px)}
+  .card{width:100%;padding:0 22px 26px;--ch:min(380px,calc(100svh - var(--top) - 2 * var(--step) - 16px))}
+  .card-top{column-gap:14px;padding-top:13px}
+  .card-n{font-size:40px}
+  .card h3{font-size:22px;line-height:1.1;letter-spacing:-.02em}
+  .card-w{flex-basis:100%;margin-top:16px;font-size:15px}
+  .weeks{padding-top:24px}
+  .weeks li{font-size:17px;line-height:1.4}
+  .weeks li+li{margin-top:12px}
+  .weeks b{font-size:18px}
+  .prog-after .act{flex-direction:column;align-items:flex-start}
+}
+@media (max-width:899px) and (max-height:720px){
+  .cards{--step:56px}
+  .card-w{margin-top:10px}
+  .weeks{padding-top:12px}
+  .weeks li+li{margin-top:8px}
+}
+@media (max-height:600px){
+  .prog-head{position:relative;height:auto;justify-content:flex-start;padding-top:64px;padding-bottom:40px}
+  .card{position:relative;top:auto;min-height:0;margin-bottom:24px}
+  .cards::after{display:none}
+  .prog-after{padding-top:40px}
+}
+
+/* three generations */
+.gen{padding-bottom:clamp(112px,12vw,190px)}
+.gen .frame-in{height:min(100svh,860px)}
+.gen img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 12%}
+.gen-h{padding:clamp(56px,6vw,96px) var(--gr) 0 calc(var(--gl) + (100% - 260px) * 3 / 12 + 60px);font-size:clamp(32px,5vw,76px);line-height:1.12;letter-spacing:-.03em}
+.gen-h span{display:block}
+@media (max-width:899px){
+  .gen .frame-in{height:auto;aspect-ratio:4/5}
+  .gen img{object-position:58% 30%}
+  .gen-h{padding-left:var(--gl);font-size:32px;line-height:1.16}
+}
+
+/* chapter openers (program, book, test) */
+.chap{font-size:15px;font-weight:600;line-height:1.3}
+.pname{font-weight:700;font-size:clamp(44px,6.2vw,96px);line-height:1;letter-spacing:-.035em}
+.psub{margin-top:clamp(14px,1.4vw,20px);font-size:clamp(19px,1.5vw,22px);font-weight:550;line-height:1.35;max-width:26em}
+
+/* test */
+.test{background:var(--grey);padding:clamp(104px,11vw,176px) var(--gr) clamp(104px,11vw,176px) var(--gl)}
+.test .pill{margin-top:30px}
+.test .chap{margin-bottom:clamp(14px,1.4vw,22px)}
+.tq{margin-top:clamp(18px,2vw,28px);font-weight:550;font-size:clamp(26px,3vw,44px);line-height:1.08;letter-spacing:-.028em}
+.tq>span{display:block;text-wrap:balance}
+.test-b{margin-top:clamp(40px,4.5vw,64px);margin-left:calc((100% - 220px) * 6 / 12 + 120px);max-width:30em}
+.test-b p{font-size:19px}
+.test-b p+p{margin-top:14px}
+.test-b .tsample{font-size:21px;font-weight:600;line-height:1.32;letter-spacing:-.01em}
+@media (max-width:899px){
+  .tq{font-size:26px;line-height:1.1}
+  .test-b{margin-left:0}
+  .test-b p{font-size:18px}
+  .test-b .tsample{font-size:19px}
+}
+
+/* book: its own ink chapter */
+.book{background:var(--ink);color:#fff;padding:clamp(104px,11vw,176px) var(--gr) clamp(104px,11vw,176px) var(--gl);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:20px;align-items:start}
+.book :focus-visible{outline-color:#fff}
+.book-h{grid-column:5 / span 8;grid-row:1}
+.book-h .chap{margin-bottom:clamp(14px,1.4vw,22px)}
+.cover{grid-column:1 / span 4;grid-row:1 / span 2;width:100%;max-width:400px}
+.book-t{grid-column:5 / span 8;grid-row:2;margin-top:clamp(40px,4vw,64px)}
+.bq{font-size:clamp(34px,3.6vw,54px);font-weight:550;line-height:1.06;letter-spacing:-.03em;text-indent:-.4em;padding-left:.4em;max-width:16em}
+.book-c{margin-top:clamp(36px,3.5vw,52px);max-width:30em}
+.book-c p{font-size:19px;line-height:1.45}
+.book-c .links{display:flex;flex-wrap:wrap;align-items:center;gap:18px 34px;margin-top:30px;font-size:19px}
+@media (max-width:899px){
+  .book{display:block}
+  .book-h{display:block}
+  .book-h .chap{margin-bottom:14px}
+  .cover{width:62%;max-width:300px;margin-top:40px}
+  .book-t{margin-top:36px}
+  .bq{font-size:32px;line-height:1.08}
+  .book-c{margin-top:26px}
+  .book-c p{font-size:17px}
+  .book-c .links{flex-direction:column;align-items:flex-start}
+}
+
+/* index: the three ways to work together */
+.idx-s{background:var(--ink);color:#fff;padding:var(--sec) var(--gr) var(--sec) var(--gl)}
+.idx-s :focus-visible{outline-color:#fff}
+.idx-s .wall-head h2{font-size:clamp(30px,3.9vw,56px);font-weight:550;line-height:1.08;letter-spacing:-.024em}
+.idx{margin-top:clamp(48px,5.5vw,84px)}
+.idx li+li{margin-top:clamp(40px,4.4vw,64px)}
+.idx a{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:20px;align-items:baseline;text-decoration:none}
+.ix-k{grid-column:1 / span 2;font-size:15px;font-weight:600;line-height:1.3}
+.ix-n{grid-column:3 / span 6;font-size:clamp(36px,4.6vw,68px);font-weight:700;line-height:1.02;letter-spacing:-.032em}
+.ix-d{grid-column:9 / span 4;font-size:18px;line-height:1.4}
+.ix-n{text-decoration:underline;text-decoration-thickness:.05em;text-underline-offset:.14em}
+.idx a:hover .ix-n{text-decoration-thickness:.09em}
+@media (min-width:900px){
+  .idx-s .wall-head{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:20px;align-items:baseline}
+  .idx-s .wall-head .lab{grid-column:1 / span 2;font-size:15px;font-weight:600}
+  .idx-s .wall-head h2{grid-column:3 / span 10}
+}
+@media (max-width:899px){
+  .idx a{display:block}
+  .ix-k,.ix-n,.ix-d{display:block}
+  .ix-n{font-size:38px;margin-top:6px}
+  .ix-d{margin-top:10px;font-size:17px}
+}
+
+/* testimonial */
+.voice{padding:0 var(--gr) clamp(120px,12vw,190px) var(--gl);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:20px}
+.voice figure{grid-column:1 / span 8;font-size:clamp(24px,2.5vw,36px);padding-left:.4em}
+.voice blockquote p{font-size:1em;font-weight:500;line-height:1.2;letter-spacing:-.022em;text-indent:-.4em}
+.voice figcaption{margin-top:28px;font-size:17px}
+.voice figcaption b{font-weight:700}
+@media (max-width:899px){
+  .voice{display:block}
+  .voice figure{font-size:24px}
+  .voice blockquote p{line-height:1.24}
+  .voice figcaption{margin-top:20px}
+}
+
+/* faq */
+.faq{padding:clamp(104px,11vw,176px) var(--gr) clamp(96px,10vw,150px) var(--gl)}
+.faq-in{margin-left:calc((100% - 220px) * 3 / 12 + 60px);max-width:46em}
+.faq-k{margin-bottom:clamp(14px,1.4vw,22px)}
+.faq-l{margin-top:clamp(36px,3.5vw,52px)}
+details+details{margin-top:8px}
+summary{list-style:none;cursor:pointer;padding-block:10px;font-size:clamp(20px,1.8vw,25px);font-weight:600;line-height:1.24;letter-spacing:-.012em}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"(+)";content:"(+)" / "";display:inline-block;margin-left:.5em;font-size:14px;font-weight:500;letter-spacing:0;vertical-align:.18em}
+details[open] summary::after{content:"(×)";content:"(×)" / ""}
+details p{margin:2px 0 14px;font-size:18px;max-width:32em}
+.safe{margin-top:64px;max-width:34em}
+.safe h3{font-size:20px;font-weight:700;line-height:1.25}
+.safe p{margin-top:8px;font-size:17px}
+.safe ul{margin-top:14px}
+.safe li{font-size:17px;line-height:1.35}
+.safe li+li{margin-top:14px}
+.safe a{display:flex;align-items:flex-end;width:fit-content;min-width:44px;min-height:44px;font-weight:700;font-size:24px;letter-spacing:-.01em;text-underline-offset:.2em;text-decoration-thickness:2px}
+.safe li span{display:block;margin-top:4px}
+@media (max-width:899px){
+  .faq-in{margin-left:0}
+  summary{font-size:20px}
+}
+
+/* closing */
+.end{background:var(--ink);color:#fff;padding:clamp(104px,11vw,176px) var(--gr) 24px var(--gl)}
+.end h2{font-size:clamp(28px,3vw,44px)}
+.big{display:inline-block;margin-top:clamp(10px,1.4vw,22px);font-size:clamp(52px,11.8vw,176px);font-weight:500;letter-spacing:-.04em;line-height:1;color:#fff;text-decoration:none;white-space:nowrap}
+.big:hover,.big:focus-visible{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:.12em}
+.big-l{margin-top:14px;font-size:16px}
+.end-row{display:flex;flex-wrap:wrap;align-items:flex-end;gap:28px 48px;margin-top:clamp(56px,6vw,96px)}
+.end-row p{font-size:20px;max-width:27em}
+.end :focus-visible{outline-color:#fff}
+.foot{display:flex;flex-wrap:wrap;column-gap:40px;row-gap:0;margin-top:clamp(112px,11vw,180px);font-size:14px;line-height:1.4}
+.foot p{padding-block:12px}
+.foot nav{display:flex;flex-wrap:wrap;column-gap:22px}
+.foot a{display:inline-flex;align-items:center;min-height:44px;padding-block:12px;text-decoration:none}
+.foot a:hover,.foot a:focus-visible{text-decoration:underline;text-underline-offset:.2em}
+@media (max-width:899px){
+  .big{font-size:14.2vw}
+  .end-row{display:block}
+  .end-row p{font-size:18px}
+  .end-row .pill{margin-top:26px}
+  .foot{flex-direction:column}
+}
+
+/* fixed pill */
+.fixed{position:fixed;z-index:40;right:var(--gr);bottom:max(18px,env(safe-area-inset-bottom,0px));visibility:hidden;transform:translateY(calc(100% + 48px));transition:transform .4s cubic-bezier(.2,.7,.2,1),visibility 0s linear .4s}
+.fixed.on{visibility:visible;transform:none;transition-delay:0s}
+@media (max-width:899px){
+  .fixed{right:auto;left:50%;transform:translate(-50%,calc(100% + 48px))}
+  .fixed.on{transform:translateX(-50%)}
+}
+
+/* film dialog */
+.film-dlg{width:100vw;height:100vh;height:100dvh;max-width:none;max-height:none;margin:0;padding:0;border:0;background:var(--ink);color:#fff}
+.film-dlg::backdrop{background:var(--ink)}
+.film-dlg[open]{display:grid;place-items:center}
+.film-dlg video{height:min(84vh,1280px);height:min(84dvh,1280px);width:auto;max-width:100%;background:var(--ink)}
+.dlg-x{position:absolute;top:10px;right:var(--gr);min-height:44px;background:none;border:0;color:#fff;font-size:16px;font-weight:600;text-decoration:underline;text-underline-offset:.25em;cursor:pointer;padding:10px 6px}
+.dlg-x:focus-visible{outline-color:#fff}
+
+/* phones: the pinned title and the card stack are released together, and a jump to #programul lands close to card 1 */
+@media (max-width:899px) and (min-height:601px){
+  .prog-stage{--top:calc(36px + 30px + min(15vw,58px) * 1.8 + 22px);--step:60px;--gap:min(14svh,120px);--ch:min(380px,calc(100svh - var(--top) - 2 * var(--step) - 16px));--hh:min(54svh,460px);--rel:calc(var(--top) + 2 * var(--step) + var(--ch) + var(--gap))}
+  .cards{--top:inherit;--step:inherit;--gap:inherit}
+  .card{--ch:inherit}
+  .prog-head{height:var(--hh);margin-bottom:calc(var(--rel) - var(--hh))}
+  .cards{margin-top:calc(var(--hh) - var(--rel))}
+}
+@media (max-width:899px) and (min-height:601px) and (max-height:720px){
+  .prog-stage{--step:56px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+<header class="hero" id="sus">
+  <nav class="nav" aria-label="Meniu">
+    <a class="nm" href="#sus">Marilena Avram</a>
+    <span class="nav-r"><span class="links"><a href="#despre">Despre mine</a>,&nbsp;<a href="#programul">Programul</a>,&nbsp;<a href="#cartea">Cartea</a>,&nbsp;<a href="#testul">Testul</a></span><a class="cta" href="https://wa.me/40745727583?text=Bun%C4%83%2C%20Marilena!%20A%C8%99%20vrea%20s%C4%83%20program%C4%83m%20discu%C8%9Bia%20gratuit%C4%83%20de%2030%20de%20minute%20despre%20Laboratorul%20Familiei." target="_blank" rel="noopener">Programează discuția gratuită</a></span>
+    <span class="mlinks"><a href="#programul">Programul</a>,&nbsp;<a href="#cartea">Cartea</a>,&nbsp;<a href="#testul">Testul</a></span>
+    <a class="tel" href="tel:+40745727583">0745 727 583</a>
+  </nav>
+  <div class="stage">
+    <h1 class="h1 caps"><span class="l1">Acasă e</span> <span class="l2">liniște.</span></h1>
+    <picture>
+      <source type="image/webp" srcset="assets/marilena-decupat-760.webp 760w, assets/marilena-decupat.webp 1200w" sizes="(min-width:900px) 56vw, 118vw">
+      <img class="cut" src="assets/marilena-decupat.png" alt="Marilena Avram, cu bărbia sprijinită în palmă, zâmbind" width="1200" height="1261" fetchpriority="high">
+    </picture>
+  </div>
+  <div class="hero-copy">
+    <p class="lab">(Laboratorul Familiei, 6 săptămâni)</p>
+    <p class="promise">Și vocea ta se aude.</p>
+    <p class="for">Pentru mama care <span class="nw">și-a</span> promis că va face altfel decât mama ei și încă cedează, ca să fie pace.</p>
+    <a class="pill" href="https://wa.me/40745727583?text=Bun%C4%83%2C%20Marilena!%20A%C8%99%20vrea%20s%C4%83%20program%C4%83m%20discu%C8%9Bia%20gratuit%C4%83%20de%2030%20de%20minute%20despre%20Laboratorul%20Familiei." target="_blank" rel="noopener">Programează discuția gratuită</a>
+    <p class="calm">30 de minute, gratuit. Îmi scrii pe WhatsApp și alegem o oră.</p>
+  </div>
+</header>
+
+<main>
+  <section class="film" aria-labelledby="film-t">
+    <div class="frame">
+      <div class="frame-in">
+        <img class="poster" src="assets/radacini-poster-curat.jpg" alt="Marilena vorbește pe malul unui râu, într-o zi cu soare" width="720" height="1280" loading="lazy">
+        <span class="pmark" aria-hidden="true">58&nbsp;s</span>
+        <div class="fhead">
+          <p class="tag">Când trecutul se așază, se așază și viața ta.</p>
+          <a class="play" href="assets/radacini.mp4" data-film>(Pornește filmul, cu sunet și subtitrare)</a>
+        </div>
+        <h2 class="ft caps" id="film-t"><span class="t1">Un minut</span> <span class="t2">despre</span> <span class="t3">rădăcini.</span></h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="wall" aria-labelledby="wall-t">
+    <div class="wall-head">
+      <p class="lab">(Ce îmi spun mamele)</p>
+      <h2 id="wall-t">Poate ai <span class="nw">spus-o</span> și tu.</h2>
+    </div>
+    <div class="qs">
+      <p class="q q1">„<span class="nw">Mi-am jurat</span> că <span class="nw">n-o să</span> fiu ca mama.<br class="bd"> Și <span class="nw">uite-mă,</span> tot eu tac și cedez.”</p>
+      <p class="q q2">„Mă simt vinovată<br class="bd"> și când stau<br class="bd"> o oră la o cafea<br class="bd"> cu o prietenă.”</p>
+      <p class="q q3">„Iar <span class="nw">ne-am certat</span><br> pe același lucru.”</p>
+      <p class="q q4">„Fac orice,<br> numai să fie liniște.”</p>
+    </div>
+    <p class="wall-end"><span>Există și o liniște în care se aude vocea ta.</span> <span>Tiparul vine de acasă. Și se poate schimba.</span></p>
+  </section>
+
+  <section class="about" id="despre" aria-labelledby="about-t">
+    <figure class="about-fig">
+      <h2 class="stmt about-h" id="about-t"><span>Sunt Marilena.</span> <span>Am fost și eu acolo.</span></h2>
+      <img src="assets/marilena-alb-negru.jpg" alt="Portret alb-negru al Marilenei, cu bărbia în palmă, sprijinită de un bloc de lemn" width="1200" height="1800" loading="lazy">
+    </figure>
+    <div class="about-t">
+      <p>Sunt fiică, soție, mamă și soră. Am crescut cu un tată aspru și distant și ani la rând <span class="nw">l-am</span> privit cu revoltă. Fără <span class="nw">să-mi</span> dau seama, am dus aceeași poveste în familia mea.</p>
+      <p>Totul <span class="nw">s-a</span> schimbat când am încetat să caut vinovați și am făcut pace cu părinții mei. Din drumul ăsta <span class="nw">s-au</span> născut cartea mea și Laboratorul Familiei.</p>
+      <p>În peste 15 ani de vânzări am învățat să ascult și să aflu ce vrea fiecare. Asta te învăț și pe tine, acasă.</p>
+      <ul class="facts">
+        <li>Coach de familie acreditat</li>
+        <li>Creatoarea Oracolului Familiilor</li>
+        <li>Facilitator ateliere „Punți între generații”</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="voice" aria-label="Din atelierele mele">
+    <figure>
+      <blockquote><p>„Am participat la workshopul Marilenei și <span class="nw">mi-am dat</span> seama că pot <span class="nw">să-mi asum</span> responsabilitatea pentru relațiile pe care le am cu familia, cu prietenii, cu oamenii din jurul meu. Să ies din judecată și <span class="nw">să-mi pun</span> întrebarea: «Cum sunt eu în aceste relații?». De acolo am schimbat perspectiva și am refăcut relația cu oamenii dragi mie.”</p></blockquote>
+      <figcaption><b>Manole Andrei</b>, participant la workshop</figcaption>
+    </figure>
+  </section>
+
+  <section class="gen" aria-labelledby="gen-t">
+    <div class="frame">
+      <div class="frame-in">
+        <img src="assets/trei-generatii.jpg" srcset="assets/trei-generatii.jpg 1400w, assets/trei-generatii-mare.jpg 2200w" sizes="100vw" alt="O femeie în vârstă și Marilena sărută pe obraji o fetiță, câte una de fiecare parte" width="1400" height="1400" loading="lazy">
+      </div>
+    </div>
+    <h2 class="stmt gen-h" id="gen-t"><span>Copiii tăi învață</span> <span>din felul în care te împaci.</span></h2>
+  </section>
+
+  <section class="idx-s" aria-labelledby="idx-t">
+    <div class="wall-head">
+      <p class="lab">(Ce găsești mai jos)</p>
+      <h2 id="idx-t">Te pot ajuta în trei feluri.</h2>
+    </div>
+    <ol class="idx">
+      <li><a href="#programul"><span class="ix-k">(Programul de coaching)</span><span class="ix-n">Laboratorul Familiei</span><span class="ix-d">Online, 6 săptămâni, doar cu tine. Începem cu o discuție gratuită.</span></a></li>
+      <li><a href="#cartea"><span class="ix-k">(Cartea)</span><span class="ix-n">Familia Ideală</span><span class="ix-d">Cartea mea, la Editura Createrra. Tipărită sau eBook.</span></a></li>
+      <li><a href="#testul"><span class="ix-k">(8 întrebări, câteva minute)</span><span class="ix-n">Testul gratuit</span><span class="ix-d">Afli tiparul certurilor tale și primești un raport de descărcat.</span></a></li>
+    </ol>
+  </section>
+
+  <section class="prog" id="programul" aria-labelledby="prog-t">
+    <div class="prog-stage">
+      <div class="prog-head">
+        <p class="chap">(Programul de coaching)</p>
+        <h2 class="prog-title caps" id="prog-t"><span class="l1">Laboratorul</span> <span class="l2">Familiei.</span></h2>
+        <p class="terms">Familia ta e laboratorul. Șase săptămâni, online, o întâlnire pe săptămână și un pas mic pe zi, în caietul tău. Lucrăm doar cu tine.</p>
+      </div>
+      <ol class="cards">
+        <li class="card" style="--i:0">
+          <div class="card-top">
+            <span class="card-n" aria-hidden="true">1</span>
+            <h3>Vezi de unde vii.</h3>
+            <p class="card-w">Săptămânile 1 și 2</p>
+          </div>
+          <ul class="weeks">
+            <li><b>Unde ești acum.</b>O ceartă reală și rolul tău în ea.</li>
+            <li><b>Ce ai adus de acasă.</b>Mama și tata, cu bune și cu rele. Faci pace cu ei, măcar în sufletul tău.</li>
+          </ul>
+        </li>
+        <li class="card" style="--i:1">
+          <div class="card-top">
+            <span class="card-n" aria-hidden="true">2</span>
+            <h3>Îți găsești vocea.</h3>
+            <p class="card-w">Săptămânile 3 și 4</p>
+          </div>
+          <ul class="weeks">
+            <li><b>Tu, pe lista ta.</b>Timp pentru tine și un „nu” spus calm, fără scuze lungi.</li>
+            <li><b>Când începe cearta.</b>Un cuvânt de pauză și uneltele de negociere din 15 ani de vânzări. Întrebarea devine „ce vrea fiecare”.</li>
+          </ul>
+        </li>
+        <li class="card" style="--i:2">
+          <div class="card-top">
+            <span class="card-n" aria-hidden="true">3</span>
+            <h3>Casa ta primește reguli simple.</h3>
+            <p class="card-w">Săptămânile 5 și 6</p>
+          </div>
+          <ul class="weeks">
+            <li><b>Regulile casei.</b>Câteva reguli simple și o discuție de 20 de minute, duminica.</li>
+            <li><b>După ceartă.</b>Împăcarea și planul tău pentru după program.</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+    <div class="prog-after">
+      <p class="out">În 6 săptămâni înveți să spui ce te deranjează, să spui „nu” fără vinovăție și să știi ce faci când începe o ceartă.</p>
+      <div class="act">
+        <a class="pill" href="https://wa.me/40745727583?text=Bun%C4%83%2C%20Marilena!%20A%C8%99%20vrea%20s%C4%83%20program%C4%83m%20discu%C8%9Bia%20gratuit%C4%83%20de%2030%20de%20minute%20despre%20Laboratorul%20Familiei." target="_blank" rel="noopener">Programează discuția gratuită</a>
+        <p class="note">Prima discuție: 30 de minute, pe WhatsApp, fără nicio presiune.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="book" id="cartea" aria-labelledby="book-t">
+    <div class="book-h">
+      <p class="chap">(Cartea)</p>
+      <div class="ph">
+        <h2 class="pname" id="book-t">Familia Ideală.</h2>
+        <p class="psub">Ghid de preparare în propriul laborator. Editura Createrra.</p>
+      </div>
+    </div>
+    <img class="cover" src="assets/coperta-familia-ideala.jpg" alt="Coperta cărții „Familia Ideală”, de Marilena Avram" width="550" height="800" loading="lazy">
+    <div class="book-t">
+      <blockquote class="bq">„Familia este ideală nu pentru că a fost perfectă, ci pentru că <span class="nw">ne-a dat</span> exact începutul.”</blockquote>
+      <div class="book-c">
+        <p>Am scris o carte pentru drumul ăsta. O găsești tipărită sau ca eBook.</p>
+        <p class="links"><a class="pill pill-w" href="https://wa.me/40745727583?text=Bun%C4%83%2C%20Marilena!%20A%C8%99%20vrea%20s%C4%83%20comand%20cartea%20%E2%80%9EFamilia%20Ideal%C4%83%E2%80%9D." target="_blank" rel="noopener">Comandă cartea</a><a class="tlink" href="https://tinyurl.com/yckf2y2t" target="_blank" rel="noopener">Ia varianta eBook</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="test" id="testul" aria-labelledby="test-t">
+    <p class="chap">(8 întrebări, câteva minute)</p>
+    <h2 class="pname" id="test-t">Testul gratuit.</h2>
+    <p class="tq"><span>Certurile tale au un tipar.</span> <span>Testul <span class="nw">ți-l arată</span>.</span></p>
+    <div class="test-b">
+      <p class="tsample">Prima întrebare: „Când apare o neînțelegere, ce se întâmplă în primele minute?”</p>
+      <p>Durează câteva minute, iar la final primești tiparul certurilor tale, câteva explicații posibile, un pas mic pentru mâine și un raport de descărcat.</p>
+      <a class="pill pill-k" href="https://stadiirel-czkzytuq.manus.space/" target="_blank" rel="noopener">Fă testul gratuit</a>
+    </div>
+  </section>
+
+  <section class="faq" id="intrebari" aria-labelledby="faq-t">
+    <div class="faq-in">
+      <p class="chap faq-k">(Despre Laboratorul Familiei)</p>
+      <h2 class="stmt" id="faq-t">Iată ce mă întreabă mamele.</h2>
+      <div class="faq-l">
+        <details><summary>Trebuie să vină și partenerul meu?</summary><p>Lucrăm doar cu tine. E de ajuns să se schimbe un om ca să se miște tot sistemul.</p></details>
+        <details><summary>Ce se întâmplă în discuția gratuită?</summary><p>Te ascult și îți spun sincer dacă programul ți se potrivește. Durează 30 de minute, online, fără nicio presiune.</p></details>
+        <details><summary>Am mai încercat cărți și terapie. De ce ar merge acum?</summary><p>Lucrăm pe ce faci zi de zi, cu pași mici, și sunt lângă tine când îți vine să renunți.</p></details>
+        <details><summary>Problemele dispar după cele 6 săptămâni?</summary><p>Sincer, nu promit asta. Când crești, rezolvi unele probleme și apar altele. Important e să ai un sistem pentru orice apare.</p></details>
+        <details><summary>E terapie?</summary><p>Este coaching și nu înlocuiește terapia sau consilierea de cuplu.</p></details>
+      </div>
+      <div class="safe">
+        <h3>Uneori ai nevoie de alt sprijin.</h3>
+        <p>Dacă în casă există violență, amenințări sau te simți în pericol, primul pas e siguranța ta.</p>
+        <ul>
+          <li><a href="tel:0800500333">0800 500 333</a><span>Linia gratuită pentru victimele violenței domestice.</span></li>
+          <li><a href="tel:112">112</a><span>În caz de urgență.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="end" aria-labelledby="end-t">
+  <h2 class="stmt" id="end-t">Hai să vorbim.</h2>
+  <a class="big" href="tel:+40745727583">0745 727 583</a>
+  <p class="big-l">Telefon și WhatsApp</p>
+  <div class="end-row">
+    <p>Prima discuție durează 30 de minute, online, și este gratuită. Îmi scrii pe WhatsApp, alegem o oră și vedem dacă programul ți se potrivește.</p>
+    <a class="pill" href="https://wa.me/40745727583?text=Bun%C4%83%2C%20Marilena!%20A%C8%99%20vrea%20s%C4%83%20program%C4%83m%20discu%C8%9Bia%20gratuit%C4%83%20de%2030%20de%20minute%20despre%20Laboratorul%20Familiei." target="_blank" rel="noopener">Programează discuția gratuită</a>
+  </div>
+  <div class="foot">
+    <p>Marilena Avram, coach de familie acreditat</p>
+    <nav aria-label="Rețele"><a href="https://www.instagram.com/marilena.avram/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/marilena.avram18" target="_blank" rel="noopener">Facebook</a><a href="https://www.linkedin.com/in/marilena-avram-b8686479/" target="_blank" rel="noopener">LinkedIn</a></nav>
+    <p>© 2026 Marilena Avram</p>
+  </div>
+</footer>
+
+<a class="fixed pill" href="https://wa.me/40745727583?text=Bun%C4%83%2C%20Marilena!%20A%C8%99%20vrea%20s%C4%83%20program%C4%83m%20discu%C8%9Bia%20gratuit%C4%83%20de%2030%20de%20minute%20despre%20Laboratorul%20Familiei." target="_blank" rel="noopener">Programează discuția gratuită</a>
+
+<dialog class="film-dlg" id="film" aria-label="Un minut despre rădăcini">
+  <button class="dlg-x" type="button" data-close>Închide</button>
+  <video controls playsinline preload="none" poster="assets/radacini-poster-curat.jpg"><source src="assets/radacini.mp4" type="video/mp4"></video>
+</dialog>
+
+<script>
+(function(){
+  var pill=document.querySelector('.fixed'),hero=document.querySelector('.hero'),end=document.querySelector('.end'),cards=document.querySelector('.cards');
+  var desk=window.matchMedia?window.matchMedia('(min-width:900px)'):{matches:false};
+  var heroIn=true,endIn=false,cardsIn=false,under=false,seen=new Set(),zones=new Set();
+  function upd(){pill.classList.toggle('on',!heroIn&&!endIn&&!cardsIn&&!under&&seen.size===0&&zones.size===0);}
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(e){heroIn=e[0].isIntersecting;upd();}).observe(hero);
+    new IntersectionObserver(function(e){endIn=e[0].isIntersecting;upd();}).observe(end);
+    if(cards)new IntersectionObserver(function(e){cardsIn=e[0].isIntersecting;upd();}).observe(cards);
+    /* the book, the test and the questions have their own buttons or context: the program pill steps aside there */
+    var zo=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting)zones.add(x.target);else zones.delete(x.target);});upd();},{rootMargin:'-30% 0px -30% 0px'});
+    Array.prototype.forEach.call(document.querySelectorAll('.book, .test, .faq'),function(z){zo.observe(z);});
+    var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting)seen.add(x.target);else seen.delete(x.target);});upd();});
+    Array.prototype.forEach.call(document.querySelectorAll('main .pill, .safe'),function(p){io.observe(p);});
+  }else{heroIn=false;upd();}
+  /* hide the pill while the film link, the testimonial, the index or the statement would sit under it */
+  var keep=[].slice.call(document.querySelectorAll('.play, .voice figure, .idx-s, .gen-h')),keepDesk=[],tick=false;
+  function check(){
+    tick=false;
+    var h=window.innerHeight,p=pill.getBoundingClientRect(),top=h-p.height-34,l=p.left-12,r=p.right+12,list=desk.matches?keep.concat(keepDesk):keep,v=false;
+    for(var i=0;i<list.length&&!v;i++){var b=list[i].getBoundingClientRect();v=b.bottom>top&&b.top<h&&b.right>l&&b.left<r;}
+    if(v!==under){under=v;upd();}
+  }
+  window.addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(check);}},{passive:true});
+  window.addEventListener('resize',check);
+  check();
+  var dlg=document.getElementById('film');
+  if(!dlg||typeof dlg.showModal!=='function')return;
+  var v=dlg.querySelector('video');
+  Array.prototype.forEach.call(document.querySelectorAll('[data-film]'),function(a){
+    a.addEventListener('click',function(ev){ev.preventDefault();dlg.showModal();var p=v.play();if(p&&p.catch)p.catch(function(){});});
+  });
+  dlg.querySelector('[data-close]').addEventListener('click',function(){dlg.close();});
+  dlg.addEventListener('click',function(ev){if(ev.target===dlg)dlg.close();});
+  dlg.addEventListener('close',function(){v.pause();});
+})();
+</script>
+</body>
+</html>
