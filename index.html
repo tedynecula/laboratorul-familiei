@@ -154,26 +154,35 @@ button{font:inherit;color:inherit}
   .wall-end{margin-left:10%}
 }
 
-/* about */
-.about{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:20px;padding:0 var(--gr) clamp(112px,12vw,190px) 0;align-items:end}
-.about-fig{grid-column:1 / span 7;position:relative;isolation:isolate;background:var(--ink);height:min(100svh,960px);min-height:620px;overflow:hidden}
-.about-fig img{position:absolute;right:0;bottom:0;height:86%;width:auto;max-width:none;mix-blend-mode:lighten}
-.about-h{position:absolute;z-index:2;left:var(--gl);top:clamp(32px,4vw,60px);color:#fff;font-size:clamp(30px,3.6vw,54px)}
-.about-h span{display:block}
-.about-h span+span{display:inline}
-.about-t{grid-column:9 / span 4;align-self:stretch;display:flex;flex-direction:column;padding-top:calc(clamp(32px,4vw,60px) + 8px)}
-.about-t p{font-size:20px}
-.about-t p+p{margin-top:16px}
-.facts{margin-top:auto;padding-top:36px}
-.facts li{font-size:17px;font-weight:650;line-height:1.35}
-.facts li+li{margin-top:6px}
-@media (max-width:899px){
-  .about{display:block;padding-right:0}
-  .about-fig{height:auto;min-height:0;padding-top:30px}
-  .about-fig img{position:relative;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 0;margin-top:2px}
-  .about-h{position:relative;top:auto;left:auto;padding:0 var(--gr) 0 var(--gl);font-size:31px;line-height:1.12}
-  .about-t{padding:32px var(--gr) 0 var(--gl)}
-  .about-t p{font-size:18px}
+/* about: a cut-in after the hero's medium shot. On the phone her face comes in front of the caps, on desktop she moves to the left */
+.about{position:relative;background:var(--grey);overflow:hidden}
+.ab-stage{position:relative;padding:30px var(--gr) 0 var(--gl)}
+.ab-h{display:block;margin-top:14px}
+.ab-name{display:block;font-weight:550;font-size:31px;line-height:1.1;letter-spacing:-.024em}
+.ab-caps{display:block;position:relative;z-index:1;margin-top:20px;font-size:min(19.6vw,92px);line-height:.86}
+.ab-caps>span{display:block;white-space:nowrap}
+.ab-caps .a3{margin-top:.2em;padding-left:.62em}
+.ab-ph{position:relative;z-index:2;--aw:min(160vw,760px);height:calc(var(--aw) * .74);margin:-26px calc(var(--gr) * -1) 0 calc(var(--gl) * -1);overflow:hidden;pointer-events:none}
+.ab-ph img{width:var(--aw);max-width:none;height:auto;margin-left:calc(55% - var(--aw) * .46)}
+.ab-t{position:relative;z-index:3;background:var(--white);padding:36px var(--gr) var(--sec) var(--gl)}
+.ab-t .ab-lead{font-size:22px;font-weight:550;line-height:1.24;letter-spacing:-.014em;max-width:21em}
+.facts{margin-top:32px}
+.facts li{font-size:20px;font-weight:650;line-height:1.18;letter-spacing:-.014em}
+.facts li+li{margin-top:10px}
+@media (min-width:900px){
+  .about{min-height:min(100svh,1000px);--c7:calc(var(--gl) + (100% - 220px) * 6 / 12 + 120px)}
+  .ab-stage{position:static;padding:clamp(36px,4vw,64px) var(--gr) 0 var(--c7)}
+  .ab-name{font-size:clamp(30px,2.9vw,44px)}
+  .ab-caps{font-size:min(9.4vw,16.5svh);margin-top:clamp(14px,1.6vw,24px)}
+  .ab-caps .a2{padding-left:.36em}
+  .ab-caps .a3{margin-top:.12em;padding-left:.62em}
+  .ab-ph{position:absolute;left:0;top:0;bottom:0;width:60%;height:auto;margin:0;overflow:visible;--ih:calc(min(100svh,1000px) * 1.08)}
+  .ab-ph img{position:absolute;left:2.5%;bottom:calc(var(--ih) * -.12);width:auto;height:var(--ih);margin:0}
+  .ab-t{background:none;padding:clamp(28px,2.8vw,44px) var(--gr) clamp(48px,5vw,80px) var(--c7)}
+  .ab-t .ab-lead{font-size:clamp(21px,1.7vw,25px);max-width:24em}
+  .facts{display:grid;grid-template-columns:repeat(2,minmax(0,max-content));gap:10px 36px;margin-top:26px}
+  .facts li{font-size:clamp(18px,1.4vw,20px)}
+  .facts li+li{margin-top:0}
 }
 
 /* program */
@@ -197,10 +206,6 @@ button{font:inherit;color:inherit}
 .weeks li{font-size:18px;line-height:1.42}
 .weeks li+li{margin-top:16px}
 .weeks b{display:block;font-size:20px;font-weight:700;line-height:1.25;letter-spacing:-.01em;margin-bottom:3px}
-.prog-after{padding:clamp(64px,7vw,110px) var(--gr) clamp(96px,10vw,160px) var(--gl)}
-.prog-after .out{font-size:clamp(26px,3vw,44px);font-weight:550;line-height:1.12;letter-spacing:-.022em;max-width:19em}
-.prog-after .act{margin-top:clamp(32px,3vw,44px);display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px}
-.prog-after .note{font-size:16px;line-height:1.35}
 @media (max-width:899px){
   .prog-head{justify-content:flex-start;padding-top:36px;height:min(72svh,620px)}
   .prog-title{font-size:min(15vw,58px);font-stretch:75%;word-spacing:.12em;margin-top:10px}
@@ -216,7 +221,6 @@ button{font:inherit;color:inherit}
   .weeks li{font-size:17px;line-height:1.4}
   .weeks li+li{margin-top:12px}
   .weeks b{font-size:18px}
-  .prog-after .act{flex-direction:column;align-items:flex-start}
 }
 @media (max-width:899px) and (max-height:720px){
   .cards{--step:56px}
@@ -245,48 +249,6 @@ button{font:inherit;color:inherit}
 
 /* chapter openers (program, book, test) */
 .chap{font-size:15px;font-weight:600;line-height:1.3}
-.pname{font-weight:700;font-size:clamp(44px,6.2vw,96px);line-height:1;letter-spacing:-.035em}
-.psub{margin-top:clamp(14px,1.4vw,20px);font-size:clamp(19px,1.5vw,22px);font-weight:550;line-height:1.35;max-width:26em}
-
-/* test */
-.test{background:var(--grey);padding:clamp(104px,11vw,176px) var(--gr) clamp(104px,11vw,176px) var(--gl)}
-.test .pill{margin-top:30px}
-.test .chap{margin-bottom:clamp(14px,1.4vw,22px)}
-.tq{margin-top:clamp(18px,2vw,28px);font-weight:550;font-size:clamp(26px,3vw,44px);line-height:1.08;letter-spacing:-.028em}
-.tq>span{display:block;text-wrap:balance}
-.test-b{margin-top:clamp(40px,4.5vw,64px);margin-left:calc((100% - 220px) * 6 / 12 + 120px);max-width:30em}
-.test-b p{font-size:19px}
-.test-b p+p{margin-top:14px}
-.test-b .tsample{font-size:21px;font-weight:600;line-height:1.32;letter-spacing:-.01em}
-@media (max-width:899px){
-  .tq{font-size:26px;line-height:1.1}
-  .test-b{margin-left:0}
-  .test-b p{font-size:18px}
-  .test-b .tsample{font-size:19px}
-}
-
-/* book: its own ink chapter */
-.book{background:var(--ink);color:#fff;padding:clamp(104px,11vw,176px) var(--gr) clamp(104px,11vw,176px) var(--gl);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:20px;align-items:start}
-.book :focus-visible{outline-color:#fff}
-.book-h{grid-column:5 / span 8;grid-row:1}
-.book-h .chap{margin-bottom:clamp(14px,1.4vw,22px)}
-.cover{grid-column:1 / span 4;grid-row:1 / span 2;width:100%;max-width:400px}
-.book-t{grid-column:5 / span 8;grid-row:2;margin-top:clamp(40px,4vw,64px)}
-.bq{font-size:clamp(34px,3.6vw,54px);font-weight:550;line-height:1.06;letter-spacing:-.03em;text-indent:-.4em;padding-left:.4em;max-width:16em}
-.book-c{margin-top:clamp(36px,3.5vw,52px);max-width:30em}
-.book-c p{font-size:19px;line-height:1.45}
-.book-c .links{display:flex;flex-wrap:wrap;align-items:center;gap:18px 34px;margin-top:30px;font-size:19px}
-@media (max-width:899px){
-  .book{display:block}
-  .book-h{display:block}
-  .book-h .chap{margin-bottom:14px}
-  .cover{width:62%;max-width:300px;margin-top:40px}
-  .book-t{margin-top:36px}
-  .bq{font-size:32px;line-height:1.08}
-  .book-c{margin-top:26px}
-  .book-c p{font-size:17px}
-  .book-c .links{flex-direction:column;align-items:flex-start}
-}
 
 /* index: the three ways to work together */
 .idx-s{background:var(--ink);color:#fff;padding:var(--sec) var(--gr) var(--sec) var(--gl)}
@@ -312,63 +274,208 @@ button{font:inherit;color:inherit}
   .ix-d{margin-top:10px;font-size:17px}
 }
 
-/* testimonial */
-.voice{padding:0 var(--gr) clamp(120px,12vw,190px) var(--gl);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:20px}
-.voice figure{grid-column:1 / span 8;font-size:clamp(24px,2.5vw,36px);padding-left:.4em}
-.voice blockquote p{font-size:1em;font-weight:500;line-height:1.2;letter-spacing:-.022em;text-indent:-.4em}
-.voice figcaption{margin-top:28px;font-size:17px}
-.voice figcaption b{font-weight:700}
-@media (max-width:899px){
-  .voice{display:block}
-  .voice figure{font-size:24px}
-  .voice blockquote p{line-height:1.24}
-  .voice figcaption{margin-top:20px}
+/* after the cards: the six weeks set inside the sentence */
+.prog-after{padding:clamp(56px,6vw,96px) var(--gr) clamp(72px,8vw,128px) var(--gl)}
+.prog-after .out{display:grid;grid-template-columns:minmax(0,1fr)}
+.o-six{display:flex;align-items:baseline;gap:.3em;font-size:min(30px,7.6vw);font-weight:650;line-height:1;letter-spacing:-.02em;white-space:nowrap}
+.o-six b{font-weight:800;font-size:min(64vw,300px);line-height:.74;letter-spacing:-.06em;margin:0 .02em 0 -.04em}
+.o-r{margin-top:26px;font-size:29px;font-weight:550;line-height:1.14;letter-spacing:-.024em}
+.prog-after .act{margin-top:34px;display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.prog-after .note{font-size:16px;line-height:1.35}
+@media (min-width:900px){
+  .prog-after{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:auto 1fr;column-gap:20px}
+  .prog-after .out{display:contents}
+  .o-six{grid-column:1 / span 6;grid-row:1 / span 2;align-self:end;font-size:clamp(30px,2.6vw,40px)}
+  .o-six b{font-size:min(30vw,440px)}
+  .o-r{grid-column:7 / span 6;grid-row:1;align-self:start;margin:clamp(8px,1.4vw,24px) 0 0;font-size:clamp(30px,2.9vw,44px);line-height:1.12}
+  .prog-after .act{grid-column:7 / span 6;grid-row:2;align-self:end;flex-direction:row;flex-wrap:wrap;align-items:center;gap:14px 28px;margin:40px 0 .2em}
+}
+@media (max-height:600px){
+  .prog-after{padding-top:40px}
 }
 
-/* faq */
-.faq{padding:clamp(104px,11vw,176px) var(--gr) clamp(96px,10vw,150px) var(--gl)}
-.faq-in{margin-left:calc((100% - 220px) * 3 / 12 + 60px);max-width:46em}
-.faq-k{margin-bottom:clamp(14px,1.4vw,22px)}
-.faq-l{margin-top:clamp(36px,3.5vw,52px)}
-details+details{margin-top:8px}
-summary{list-style:none;cursor:pointer;padding-block:10px;font-size:clamp(20px,1.8vw,25px);font-weight:600;line-height:1.24;letter-spacing:-.012em}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"(+)";content:"(+)" / "";display:inline-block;margin-left:.5em;font-size:14px;font-weight:500;letter-spacing:0;vertical-align:.18em}
-details[open] summary::after{content:"(×)";content:"(×)" / ""}
-details p{margin:2px 0 14px;font-size:18px;max-width:32em}
-.safe{margin-top:64px;max-width:34em}
-.safe h3{font-size:20px;font-weight:700;line-height:1.25}
-.safe p{margin-top:8px;font-size:17px}
-.safe ul{margin-top:14px}
+/* testimonial: one voice, one poster */
+.vh{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.voice{background:var(--ink);color:#fff}
+.vp{min-height:100svh;display:flex;flex-direction:column;padding:clamp(56px,7vw,112px) var(--gr) clamp(48px,6vw,96px) var(--gl)}
+.vfrag{margin-top:clamp(18px,2vw,30px);margin-left:-.02em;font-weight:800;font-stretch:75%;text-transform:uppercase;letter-spacing:-.02em;line-height:1;font-size:min(19.4vw,96px);white-space:nowrap}
+.vfrag .p,.vfrag .w{display:block}
+.vq{margin-top:auto;padding-top:34px}
+.vq p{font-size:19px;line-height:1.42;max-width:30em}
+.vcap{margin-top:18px;font-size:15px;line-height:1.35}
+.vcap b{display:block;font-size:17px;font-weight:700}
+@media (min-width:900px){
+  .vp{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:auto auto 1fr auto;column-gap:20px}
+  .vp>.chap,.vfrag{grid-column:1 / span 12}
+  .vfrag{font-size:min(11.4vw,21svh);line-height:.92}
+  .vfrag .w{display:inline}
+  .vq{grid-column:7 / span 6;grid-row:3;align-self:end;margin:0;padding-top:40px}
+  .vq p{font-size:clamp(18px,1.45vw,21px)}
+  .vcap{grid-column:7 / span 6;grid-row:4}
+}
+
+/* book: a critic's line, the dedication with the book standing in front of it, then why you would want it */
+.book{--blk:clamp(88px,9vw,150px);background:var(--grey);overflow:clip;padding:clamp(72px,8vw,128px) var(--gr) var(--sec) var(--gl)}
+.bk-crit{margin-top:22px}
+.bk-crit p{font-size:min(8.2vw,34px);font-stretch:75%;line-height:1;letter-spacing:-.012em;text-indent:-.3em;padding-left:.3em;max-width:11em}
+.bk-crit figcaption{margin-top:10px;font-size:15px;font-weight:700;line-height:1.3}
+.bk-poster{--fs:13.6vw;display:grid;grid-template-columns:minmax(0,1fr);margin-top:34px}
+.bk-h{grid-area:1 / 1;position:relative;z-index:1;font-size:var(--fs);line-height:1;margin-left:-.03em}
+.bk-h>span,.bk-h .j{display:block;white-space:nowrap}
+.bk3{grid-area:1 / 1;justify-self:start;align-self:start;position:relative;z-index:2;--w:min(60vw,400px);--t:calc(var(--w) * .081);width:var(--w);margin:calc(var(--fs) * 4.9) 0 0 calc(var(--fs) * 2.45);perspective:2000px;perspective-origin:50% -30%}
+.bk3::after{content:"";position:absolute;z-index:0;left:4%;right:-4%;bottom:-14px;height:28px;border-radius:50%;background:var(--ink);opacity:.3;filter:blur(14px)}
+.bk3-o{position:relative;z-index:1;aspect-ratio:1088 / 1600;transform-style:preserve-3d;transform-origin:0 50%;transform:rotateY(var(--ry,24deg));transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.bk3-f{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:translateZ(calc(var(--t) / 2));backface-visibility:hidden}
+.bk3-s{position:absolute;top:0;bottom:0;left:calc(var(--t) / -2);width:var(--t);background:url(assets/coperta-cotor.jpg) center / 100% 100%;transform:rotateY(-90deg);backface-visibility:hidden}
+.bk3-p{position:absolute;left:1.5%;right:1.5%;top:calc(var(--t) / -2);height:var(--t);background:var(--white);transform:rotateX(90deg);backface-visibility:hidden}
+.bk-src{grid-area:1 / 1;align-self:end;justify-self:start;max-width:calc(var(--fs) * 2.3);font-size:14px;font-weight:500;line-height:1.3}
+.bk-pitch{margin-top:48px}
+.bk-q{font-size:27px;font-weight:550;line-height:1.12;letter-spacing:-.024em;text-indent:-.36em}
+.bk-by{margin-top:14px;font-size:15px;line-height:1.3}
+.bk-get{margin-top:26px;font-size:18px;line-height:1.42;max-width:30em}
+.bk-get b{font-weight:700}
+.bk-buy{margin-top:32px;display:flex;flex-direction:column;align-items:flex-start;gap:20px}
+.bk-buy .pill{align-self:stretch}
+.bk-buy .tlink{font-size:17px}
+.bk-col{margin-top:30px;font-size:15px;line-height:1.4;max-width:26em}
+.bk-mami{margin:var(--blk) calc(-1 * var(--gr)) 0 calc(-1 * var(--gl));padding:64px var(--gr) 72px var(--gl);background:var(--white)}
+.bk-dlg{font-size:22px;font-weight:550;line-height:1.18;letter-spacing:-.02em;max-width:19em}
+.mami{margin-top:40px}
+.mami .m1{font-size:30px;font-weight:550;line-height:1.1;letter-spacing:-.024em;max-width:12em}
+.mami .caps{display:block;font-size:25vw;line-height:.84;margin:0 0 .14em -.2em}
+.mami-pg{display:block;margin-top:8px;font-size:15px;font-weight:500;letter-spacing:0;text-indent:0}
+.bk-in{margin-top:var(--blk)}
+.bk-st{margin-top:14px;font-size:24px;font-weight:550;line-height:1.16;letter-spacing:-.02em;max-width:20em}
+.ex-k{margin-top:40px}
+.ex{margin-top:16px}
+.ex li{font-size:20px;font-weight:600;line-height:1.22;letter-spacing:-.012em;max-width:22em}
+.ex li+li{margin-top:20px}
+.ex small{display:block;margin-top:4px;font-size:15px;font-weight:500;letter-spacing:0}
+.letter{width:min(230px,60vw);margin:44px 0 0 auto}
+.lt-b{display:block;padding:10px 10px 0;background:var(--white);color:var(--ink);text-decoration:none;transform:rotate(-3deg);transition:transform .5s cubic-bezier(.2,.7,.2,1);-webkit-tap-highlight-color:transparent}
+.lt-b:hover{transform:rotate(-1deg)}
+.lt-go{display:flex;align-items:center;min-height:44px;padding:0 2px;font-size:15px;font-weight:650;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.22em}
+.letter figcaption{margin-top:14px;font-size:14px;line-height:1.3}
+.bk-close{margin-top:52px}
+.bk-close .pill{width:100%}
+@media (min-width:900px){
+  .book{padding-top:clamp(56px,6vw,96px)}
+  .bk-open{position:relative}
+  .bk-crit{position:absolute;z-index:3;top:0;right:0;width:calc((100% - 220px) * 3 / 12 + 40px);margin:0}
+  .bk-crit p{font-size:clamp(26px,2.2vw,34px);max-width:none}
+  .book{--fs:min(9vw,15.6svh);--w:min(26.5vw,400px)}
+  .bk-poster{--fs:inherit;position:relative;display:block;margin-top:clamp(28px,3vw,48px)}
+  .bk-h .j{display:inline}
+  .bk3{position:absolute;left:calc(var(--fs) * 6.82);top:var(--fs);--w:inherit;margin:0}
+  .bk-src{max-width:none;margin-top:12px}
+  .bk-pitch{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:20px;align-items:start;margin-top:56px}
+  .bk-main{grid-column:1 / span 6}
+  .bk-side{grid-column:8 / span 5;padding-top:max(24px,calc(var(--w) * 1.47 - var(--fs) * 2 + 4px))}
+  .bk-q{font-size:clamp(26px,2.1vw,32px)}
+  .bk-get{max-width:30em}
+  .bk-buy{flex-direction:row;flex-wrap:wrap;align-items:center;gap:16px 30px;margin:0}
+  .bk-buy .pill{align-self:auto}
+  .bk-col{margin-top:22px}
+  .bk-mami{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:20px;padding-top:clamp(96px,9vw,150px);padding-bottom:clamp(104px,10vw,160px)}
+  .bk-dlg{grid-column:1 / span 5;font-size:clamp(24px,2.1vw,32px)}
+  .mami{grid-column:1 / span 12;margin-top:clamp(48px,5vw,80px)}
+  .mami .m1{font-size:clamp(30px,3vw,44px);max-width:none}
+  .mami .caps{font-size:min(25.6vw,400px);margin-left:-.05em}
+  .mami .mq{display:block;margin-left:calc((100% - 220px) * 6 / 12 + 120px);max-width:13em}
+  .bk-in{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:20px;align-items:start}
+  .bk-in>*{grid-column:1 / span 6}
+  .bk-st{font-size:clamp(28px,2.6vw,38px)}
+  .ex li{font-size:22px}
+  .letter{grid-column:8 / span 5;grid-row:1 / span 6;width:min(300px,100%);margin:40px auto 0}
+  .bk-close .pill{width:auto}
+}
+
+/* test: the real first question is the poster */
+.test{background:var(--ink);color:#fff;padding:var(--sec) var(--gr) var(--sec) var(--gl)}
+.test :focus-visible{outline-color:#fff}
+.t-title{margin-top:12px;font-size:30px;font-weight:700;line-height:1.1;letter-spacing:-.02em}
+.t-sub{margin-top:8px;font-size:19px;line-height:1.35;max-width:22em}
+.t-q{margin-top:72px}
+.t-qq{margin-top:16px;font-size:min(11.6vw,50px);font-weight:600;line-height:1.04;letter-spacing:-.034em;text-indent:-.34em;padding-left:.34em;max-width:13em}
+.t-a{margin-top:40px}
+.t-a li{font-size:21px;font-weight:550;line-height:1.24;letter-spacing:-.012em;text-indent:-.4em;padding-left:.4em;max-width:19em}
+.t-a li+li{margin-top:20px}
+.t-get{margin-top:56px}
+.t-get p{font-size:18px;line-height:1.42;max-width:30em}
+.t-get .pill{margin-top:28px}
+@media (min-width:900px){
+  .test{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:20px;align-items:start}
+  .t-head{grid-column:1 / span 6;grid-row:1}
+  .t-title{font-size:clamp(32px,2.6vw,40px)}
+  .t-sub{font-size:20px}
+  .t-q{display:contents}
+  .t-q>.chap{grid-column:1 / span 6;grid-row:2;margin-top:clamp(72px,7vw,112px)}
+  .t-qq{grid-column:1 / span 12;grid-row:3;font-size:clamp(50px,5.6vw,84px);max-width:13.5em}
+  .t-a{grid-column:6 / span 7;grid-row:4;margin-top:clamp(48px,4.4vw,72px)}
+  .t-a li{font-size:clamp(22px,2vw,30px);max-width:none}
+  .t-a li+li{margin-top:clamp(18px,1.8vw,26px)}
+  .t-get{grid-column:1 / span 4;grid-row:4;margin-top:clamp(56px,4.8vw,80px)}
+  .t-get p{font-size:18px}
+}
+
+/* questions, answered as in an interview */
+.faq{padding:var(--sec) var(--gr) clamp(104px,11vw,160px) var(--gl)}
+.fq-h{margin-top:12px}
+.qa{margin:clamp(48px,5.5vw,84px) 0 0}
+.qa>div+div{margin-top:40px}
+.qa dt{font-size:25px;font-weight:650;line-height:1.14;letter-spacing:-.018em;max-width:17em}
+.qa dd{margin:10px 0 0;font-size:18px;line-height:1.42;max-width:32em}
+.safe{margin-top:88px;max-width:34em}
+.safe h3{font-size:24px;font-weight:700;line-height:1.2;letter-spacing:-.016em}
+.safe p{margin-top:10px;font-size:17px}
+.safe ul{margin-top:16px}
 .safe li{font-size:17px;line-height:1.35}
 .safe li+li{margin-top:14px}
-.safe a{display:flex;align-items:flex-end;width:fit-content;min-width:44px;min-height:44px;font-weight:700;font-size:24px;letter-spacing:-.01em;text-underline-offset:.2em;text-decoration-thickness:2px}
-.safe li span{display:block;margin-top:4px}
-@media (max-width:899px){
-  .faq-in{margin-left:0}
-  summary{font-size:20px}
+.safe a{display:inline-flex;align-items:center;min-width:44px;min-height:44px;font-weight:700;font-size:26px;line-height:1.1;letter-spacing:-.02em;text-decoration-thickness:2px;text-underline-offset:.16em}
+.safe li span{display:block}
+@media (min-width:900px){
+  .fq-hd{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:20px;align-items:baseline}
+  .fq-hd .chap{grid-column:1 / span 2;font-size:15px}
+  .fq-h{grid-column:3 / span 10;margin:0}
+  .qa>div{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:20px;align-items:baseline}
+  .qa>div+div{margin-top:clamp(40px,4vw,64px)}
+  .qa dt{grid-column:3 / span 5;font-size:clamp(26px,2.1vw,30px);max-width:none}
+  .qa dd{grid-column:8 / span 5;margin:0;font-size:clamp(18px,1.4vw,20px)}
+  .safe{margin:clamp(96px,8vw,128px) 0 0 calc((100% - 220px) * 2 / 12 + 40px)}
+  .safe a{font-size:28px}
 }
 
-/* closing */
-.end{background:var(--ink);color:#fff;padding:clamp(104px,11vw,176px) var(--gr) 24px var(--gl)}
-.end h2{font-size:clamp(28px,3vw,44px)}
-.big{display:inline-block;margin-top:clamp(10px,1.4vw,22px);font-size:clamp(52px,11.8vw,176px);font-weight:500;letter-spacing:-.04em;line-height:1;color:#fff;text-decoration:none;white-space:nowrap}
-.big:hover,.big:focus-visible{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:.12em}
-.big-l{margin-top:14px;font-size:16px}
-.end-row{display:flex;flex-wrap:wrap;align-items:flex-end;gap:28px 48px;margin-top:clamp(56px,6vw,96px)}
-.end-row p{font-size:20px;max-width:27em}
+/* closing: the page ends on her face */
+.end{position:relative;background:var(--ink);color:#fff;padding:var(--sec) var(--gr) 24px var(--gl);overflow:clip}
 .end :focus-visible{outline-color:#fff}
-.foot{display:flex;flex-wrap:wrap;column-gap:40px;row-gap:0;margin-top:clamp(112px,11vw,180px);font-size:14px;line-height:1.4}
+.end-h{position:relative;z-index:1;font-size:20.4vw;line-height:.86;margin-left:-.03em}
+.end-h span{display:block;white-space:nowrap}
+.end-ph{position:relative;z-index:2;--ew:min(118vw,620px);height:calc(var(--ew) * 1.02);margin:calc(var(--ew) * -.07) calc(var(--gr) * -1) 0 calc(var(--gl) * -1);overflow:hidden;pointer-events:none;-webkit-mask-image:linear-gradient(#000 70%,transparent);mask-image:linear-gradient(#000 70%,transparent)}
+.end-ph img{width:var(--ew);max-width:none;height:auto;margin-left:calc(100% - var(--ew) * .9)}
+.end-tel{position:relative;z-index:3;margin-top:-24px}
+.big{display:inline-block;font-size:min(24vw,112px);font-weight:800;letter-spacing:-.045em;line-height:.88;color:#fff;text-decoration:none}
+.big span{display:block;white-space:nowrap}
+.big:hover,.big:focus-visible{text-decoration:underline;text-decoration-thickness:4px;text-underline-offset:.1em}
+.big-l{margin-top:14px;font-size:16px}
+.end-row{margin-top:clamp(48px,5vw,72px)}
+.end-row p{font-size:19px;max-width:27em}
+.end-row .pill{margin-top:26px}
+.foot{display:flex;flex-direction:column;margin-top:clamp(96px,10vw,160px);font-size:14px;line-height:1.4}
 .foot p{padding-block:12px}
 .foot nav{display:flex;flex-wrap:wrap;column-gap:22px}
 .foot a{display:inline-flex;align-items:center;min-height:44px;padding-block:12px;text-decoration:none}
 .foot a:hover,.foot a:focus-visible{text-decoration:underline;text-underline-offset:.2em}
-@media (max-width:899px){
-  .big{font-size:14.2vw}
-  .end-row{display:block}
-  .end-row p{font-size:18px}
-  .end-row .pill{margin-top:26px}
-  .foot{flex-direction:column}
+@media (min-width:900px){
+  .end{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:20px;align-content:start}
+  .end>*{grid-column:1 / span 7}
+  .end-h{font-size:min(12.4vw,200px)}
+  .end>.end-ph{grid-column:auto;grid-row:auto;position:absolute;right:max(0px,calc(50% - 760px));bottom:0;width:min(40vw,620px);height:auto;margin:0;-webkit-mask-image:none;mask-image:none}
+  .end-ph img{width:100%;margin:0}
+  .end-tel{margin-top:clamp(40px,4vw,64px)}
+  .big{font-size:min(10.4vw,19svh)}
+  .end-row{margin-top:clamp(40px,4vw,64px)}
+  .end-row p{font-size:20px}
+  .foot{flex-direction:row;flex-wrap:wrap;column-gap:40px}
 }
 
 /* fixed pill */
@@ -386,6 +493,7 @@ details p{margin:2px 0 14px;font-size:18px;max-width:32em}
 .film-dlg video{height:min(84vh,1280px);height:min(84dvh,1280px);width:auto;max-width:100%;background:var(--ink)}
 .dlg-x{position:absolute;top:10px;right:var(--gr);min-height:44px;background:none;border:0;color:#fff;font-size:16px;font-weight:600;text-decoration:underline;text-underline-offset:.25em;cursor:pointer;padding:10px 6px}
 .dlg-x:focus-visible{outline-color:#fff}
+.lt-dlg img{width:auto;height:auto;max-width:calc(100vw - 24px);max-height:calc(100vh - 80px);max-height:calc(100dvh - 80px)}
 
 /* phones: the pinned title and the card stack are released together, and a jump to #programul lands close to card 1 */
 @media (max-width:899px) and (min-height:601px){
@@ -458,27 +566,22 @@ details p{margin:2px 0 14px;font-size:18px;max-width:32em}
   </section>
 
   <section class="about" id="despre" aria-labelledby="about-t">
-    <figure class="about-fig">
-      <h2 class="stmt about-h" id="about-t"><span>Sunt Marilena.</span> <span>Am fost și eu acolo.</span></h2>
-      <img src="assets/marilena-alb-negru.jpg" alt="Portret alb-negru al Marilenei, cu bărbia în palmă, sprijinită de un bloc de lemn" width="1200" height="1800" loading="lazy">
-    </figure>
-    <div class="about-t">
-      <p>Sunt fiică, soție, mamă și soră. Am crescut cu un tată aspru și distant și ani la rând <span class="nw">l-am</span> privit cu revoltă. Fără <span class="nw">să-mi</span> dau seama, am dus aceeași poveste în familia mea.</p>
-      <p>Totul <span class="nw">s-a</span> schimbat când am încetat să caut vinovați și am făcut pace cu părinții mei. Din drumul ăsta <span class="nw">s-au</span> născut cartea mea și Laboratorul Familiei.</p>
-      <p>În peste 15 ani de vânzări am învățat să ascult și să aflu ce vrea fiecare. Asta te învăț și pe tine, acasă.</p>
+    <div class="ab-stage">
+      <p class="chap">(Despre mine)</p>
+      <h2 class="ab-h" id="about-t"><span class="ab-name">Sunt Marilena.</span> <span class="caps ab-caps"><span class="a1">Am fost</span> <span class="a2">și eu</span> <span class="a3">acolo.</span></span></h2>
+      <div class="ab-ph">
+        <img src="assets/v5a-culoare-decupat-760.webp" srcset="assets/v5a-culoare-decupat-760.webp 760w, assets/v5a-culoare-decupat-1200.webp 1200w" sizes="(min-width:900px) 60vw, 160vw" alt="Marilena, zâmbind, cu bărbia sprijinită pe mâini, aplecată peste un bloc de lemn pe care stau un caiet și un pix" width="1200" height="1722" loading="lazy">
+      </div>
+    </div>
+    <div class="ab-t">
+      <p class="ab-lead">Sunt fiică, soție, mamă și soră. Am crescut cu un tată aspru și distant și, fără <span class="nw">să-mi</span> dau seama, am dus aceeași poveste în familia mea. Totul <span class="nw">s-a</span> schimbat când am încetat să caut vinovați și am făcut pace cu părinții mei.</p>
       <ul class="facts">
         <li>Coach de familie acreditat</li>
+        <li>Peste 15 ani în vânzări</li>
         <li>Creatoarea Oracolului Familiilor</li>
         <li>Facilitator ateliere „Punți între generații”</li>
       </ul>
     </div>
-  </section>
-
-  <section class="voice" aria-label="Din atelierele mele">
-    <figure>
-      <blockquote><p>„Am participat la workshopul Marilenei și <span class="nw">mi-am dat</span> seama că pot <span class="nw">să-mi asum</span> responsabilitatea pentru relațiile pe care le am cu familia, cu prietenii, cu oamenii din jurul meu. Să ies din judecată și <span class="nw">să-mi pun</span> întrebarea: «Cum sunt eu în aceste relații?». De acolo am schimbat perspectiva și am refăcut relația cu oamenii dragi mie.”</p></blockquote>
-      <figcaption><b>Manole Andrei</b>, participant la workshop</figcaption>
-    </figure>
   </section>
 
   <section class="gen" aria-labelledby="gen-t">
@@ -546,7 +649,7 @@ details p{margin:2px 0 14px;font-size:18px;max-width:32em}
       </ol>
     </div>
     <div class="prog-after">
-      <p class="out">În 6 săptămâni înveți să spui ce te deranjează, să spui „nu” fără vinovăție și să știi ce faci când începe o ceartă.</p>
+      <p class="out"><span class="o-six">În <b>6</b> săptămâni</span> <span class="o-r">înveți să spui ce te deranjează, să spui „nu” fără vinovăție și să știi ce faci când începe o ceartă.</span></p>
       <div class="act">
         <a class="pill" href="https://wa.me/40745727583?text=Bun%C4%83%2C%20Marilena!%20A%C8%99%20vrea%20s%C4%83%20program%C4%83m%20discu%C8%9Bia%20gratuit%C4%83%20de%2030%20de%20minute%20despre%20Laboratorul%20Familiei." target="_blank" rel="noopener">Programează discuția gratuită</a>
         <p class="note">Prima discuție: 30 de minute, pe WhatsApp, fără nicio presiune.</p>
@@ -554,63 +657,122 @@ details p{margin:2px 0 14px;font-size:18px;max-width:32em}
     </div>
   </section>
 
+  <section class="voice" aria-labelledby="voice-t">
+    <figure class="vp">
+      <h2 class="vh" id="voice-t">Ce spun alții.</h2>
+      <p class="chap" aria-hidden="true">(Ce spun alții)</p>
+      <p class="vfrag" aria-hidden="true"><span class="p"><span class="w">„Cum sunt</span> <span class="w">eu în</span></span> <span class="p"><span class="w">aceste</span> <span class="w">relații?”</span></span></p>
+      <blockquote class="vq"><p>„Am participat la <span class="nw">workshop-ul</span> Marilenei și am avut conștientizarea că pot să îmi iau responsabilitatea asupra relațiilor pe care le am cu familia, cu prietenii, cu oamenii din jurul meu, să ies din judecata că ei ar fi în «feluri și feluri» închipuite de mine, și să îmi pun întrebarea «Cum sunt eu în aceste relații?». De acolo am schimbat perspectiva, și în același timp, am restaurat relația cu oamenii dragi mie.”</p></blockquote>
+      <figcaption class="vcap"><b>Manole Andrei</b><span class="vh">, </span>participant la un atelier al Marilenei</figcaption>
+    </figure>
+  </section>
 
   <section class="book" id="cartea" aria-labelledby="book-t">
-    <div class="book-h">
+    <div class="bk-open">
       <p class="chap">(Cartea)</p>
-      <div class="ph">
-        <h2 class="pname" id="book-t">Familia Ideală.</h2>
-        <p class="psub">Ghid de preparare în propriul laborator. Editura Createrra.</p>
+      <figure class="bk-crit">
+        <blockquote><p class="caps">„o carte scrisă cu vulnerabilitate și autenticitate”</p></blockquote>
+        <figcaption>Vlad Grigore</figcaption>
+      </figure>
+      <div class="bk-poster">
+        <h2 class="caps bk-h" id="book-t"><span>Familia <span class="j">ideală</span></span> <span>există, <span class="j">e în</span></span> <span>mâinile <span class="j">tale.</span></span></h2>
+        <div class="bk3" data-book>
+          <div class="bk3-o">
+            <img class="bk3-f" src="assets/v5a-coperta-fata-600.jpg" srcset="assets/v5a-coperta-fata-600.jpg 600w, assets/v5a-coperta-fata-800.jpg 800w" sizes="(min-width:900px) 400px, 60vw" alt="Coperta cărții „Familia Ideală. Ghid de preparare în propriul laborator”, de Marilena Avram, Editura Createrra" width="800" height="1176" loading="lazy" decoding="async">
+            <span class="bk3-s" aria-hidden="true"></span>
+            <span class="bk3-p" aria-hidden="true"></span>
+          </div>
+        </div>
+        <p class="bk-src">Din deschiderea cărții, pagina 4.</p>
       </div>
     </div>
-    <img class="cover" src="assets/coperta-familia-ideala.jpg" alt="Coperta cărții „Familia Ideală”, de Marilena Avram" width="550" height="800" loading="lazy">
-    <div class="book-t">
-      <blockquote class="bq">„Familia este ideală nu pentru că a fost perfectă, ci pentru că <span class="nw">ne-a dat</span> exact începutul.”</blockquote>
-      <div class="book-c">
-        <p>Am scris o carte pentru drumul ăsta. O găsești tipărită sau ca eBook.</p>
-        <p class="links"><a class="pill pill-w" href="https://wa.me/40745727583?text=Bun%C4%83%2C%20Marilena!%20A%C8%99%20vrea%20s%C4%83%20comand%20cartea%20%E2%80%9EFamilia%20Ideal%C4%83%E2%80%9D." target="_blank" rel="noopener">Comandă cartea</a><a class="tlink" href="https://tinyurl.com/yckf2y2t" target="_blank" rel="noopener">Ia varianta eBook</a></p>
+    <div class="bk-pitch">
+      <div class="bk-main">
+      <blockquote class="bk-q"><p>„Dacă ai obosit să repeți tipare, dacă ai obosit să cauți vinovați, răni și traume, atunci cartea asta este pentru tine.”</p></blockquote>
+      <p class="bk-by">Marilena Avram, pe coperta a patra</p>
+      <p class="bk-get"><b>Ce îmi doresc să obții?</b> Liniște în suflet, împăcare cu trecutul, cu familia de origine și relații conștiente în prezent.</p>
       </div>
+      <div class="bk-side">
+      <p class="bk-buy"><a class="pill pill-k" href="https://wa.me/40745727583?text=Bun%C4%83%2C%20Marilena!%20A%C8%99%20vrea%20s%C4%83%20comand%20cartea%20%E2%80%9EFamilia%20Ideal%C4%83%E2%80%9D." target="_blank" rel="noopener">Comandă cartea</a><a class="tlink" href="https://tinyurl.com/yckf2y2t" target="_blank" rel="noopener">Ia varianta eBook</a></p>
+      <p class="bk-col">Familia Ideală. Ghid de preparare în propriul laborator. Editura Createrra, 2025. Tipărită sau eBook.</p>
+      </div>
+    </div>
+    <div class="bk-mami">
+      <p class="bk-dlg">Cartea e un dialog imaginar între mine și fiica mea. Ea pune 18 întrebări, eu răspund.</p>
+      <div class="mami">
+        <p class="m1"><span class="caps">„Mami,</span> <span class="mq">ce înseamnă cuvântul «mamă» pentru tine?”<span class="mami-pg">Pagina 33</span></span></p>
+      </div>
+    </div>
+    <div class="bk-in">
+      <p class="chap">(Ce găsești înăuntru)</p>
+      <p class="bk-st">Zece capitole, fiecare despre o altă „familie”: de origine, educațională, profesională, de comunitate și de cuplu. Și un interviu cu Laura Pănăzan, psihoterapeut.</p>
+      <p class="chap ex-k">(Unelte din carte, marcate cu mici lanterne)</p>
+      <ul class="ex">
+        <li>Două fraze de completat: „În mintea mea, eu ȘTIU că…” și „În inima mea eu SIMT că…”.<small>Pagina 26</small></li>
+        <li>O scrisoare de recunoștință către părinții tăi, citită cu voce tare.<small>Pagina 33</small></li>
+        <li>„Cum să te cerți cu sens”, cu un timp-limită pentru supărare.<small>Pagina 108</small></li>
+      </ul>
+      <figure class="letter">
+        <a class="lt-b" href="assets/scrisoare-carte.jpg" data-letter><img src="assets/scrisoare-carte.jpg" alt="Scrisoarea scrisă de mână a Marilenei către părinți, care începe cu „Dragă mamă/tată”" width="580" height="803" loading="lazy"><span class="lt-go">Citește scrisoarea</span></a>
+        <figcaption>Scrisoarea mea către părinți, pagina 32.</figcaption>
+      </figure>
+      <p class="bk-close"><a class="pill pill-k" href="https://wa.me/40745727583?text=Bun%C4%83%2C%20Marilena!%20A%C8%99%20vrea%20s%C4%83%20comand%20cartea%20%E2%80%9EFamilia%20Ideal%C4%83%E2%80%9D." target="_blank" rel="noopener">Comandă cartea</a></p>
     </div>
   </section>
 
   <section class="test" id="testul" aria-labelledby="test-t">
-    <p class="chap">(8 întrebări, câteva minute)</p>
-    <h2 class="pname" id="test-t">Testul gratuit.</h2>
-    <p class="tq"><span>Certurile tale au un tipar.</span> <span>Testul <span class="nw">ți-l arată</span>.</span></p>
-    <div class="test-b">
-      <p class="tsample">Prima întrebare: „Când apare o neînțelegere, ce se întâmplă în primele minute?”</p>
-      <p>Durează câteva minute, iar la final primești tiparul certurilor tale, câteva explicații posibile, un pas mic pentru mâine și un raport de descărcat.</p>
-      <a class="pill pill-k" href="https://stadiirel-czkzytuq.manus.space/" target="_blank" rel="noopener">Fă testul gratuit</a>
+    <div class="t-head">
+      <p class="chap">(8 întrebări, câteva minute)</p>
+      <h2 class="t-title" id="test-t">Testul gratuit.</h2>
+    </div>
+    <div class="t-q">
+      <p class="chap">(Prima întrebare)</p>
+      <p class="t-qq" id="t-q1">„Când apare o neînțelegere, ce se întâmplă în primele minute?”</p>
+      <ul class="t-a" aria-labelledby="t-q1">
+        <li>„Tonul crește repede și unul dintre noi spune ceva ce regretă.”</li>
+        <li>„Unul dintre noi tace sau iese din cameră.”</li>
+        <li>„Știu deja cum se termină, am mai <span class="nw">trăit-o</span> de multe ori.”</li>
+        <li>„Pornim încordați, dar reușim să ne calmăm și să vorbim.”</li>
+      </ul>
+    </div>
+    <div class="t-get">
+      <p>Pe pagina testului alegi răspunsul tău. La final primești tiparul după care tind să se poarte certurile tale, câteva explicații posibile pentru ce îl ține în viață și un pas mic pentru mâine, într-un raport de descărcat.</p>
+      <a class="pill pill-w" href="https://stadiirel-czkzytuq.manus.space/" target="_blank" rel="noopener">Fă testul gratuit</a>
     </div>
   </section>
 
   <section class="faq" id="intrebari" aria-labelledby="faq-t">
-    <div class="faq-in">
-      <p class="chap faq-k">(Despre Laboratorul Familiei)</p>
-      <h2 class="stmt" id="faq-t">Iată ce mă întreabă mamele.</h2>
-      <div class="faq-l">
-        <details><summary>Trebuie să vină și partenerul meu?</summary><p>Lucrăm doar cu tine. E de ajuns să se schimbe un om ca să se miște tot sistemul.</p></details>
-        <details><summary>Ce se întâmplă în discuția gratuită?</summary><p>Te ascult și îți spun sincer dacă programul ți se potrivește. Durează 30 de minute, online, fără nicio presiune.</p></details>
-        <details><summary>Am mai încercat cărți și terapie. De ce ar merge acum?</summary><p>Lucrăm pe ce faci zi de zi, cu pași mici, și sunt lângă tine când îți vine să renunți.</p></details>
-        <details><summary>Problemele dispar după cele 6 săptămâni?</summary><p>Sincer, nu promit asta. Când crești, rezolvi unele probleme și apar altele. Important e să ai un sistem pentru orice apare.</p></details>
-        <details><summary>E terapie?</summary><p>Este coaching și nu înlocuiește terapia sau consilierea de cuplu.</p></details>
-      </div>
-      <div class="safe">
-        <h3>Uneori ai nevoie de alt sprijin.</h3>
-        <p>Dacă în casă există violență, amenințări sau te simți în pericol, primul pas e siguranța ta.</p>
-        <ul>
-          <li><a href="tel:0800500333">0800 500 333</a><span>Linia gratuită pentru victimele violenței domestice.</span></li>
-          <li><a href="tel:112">112</a><span>În caz de urgență.</span></li>
-        </ul>
-      </div>
+    <div class="fq-hd">
+      <p class="chap">(Despre Laboratorul Familiei)</p>
+      <h2 class="stmt fq-h" id="faq-t">Iată ce mă întreabă mamele.</h2>
+    </div>
+    <dl class="qa">
+      <div><dt>Trebuie să vină și partenerul meu?</dt><dd>Lucrăm doar cu tine. E de ajuns să se schimbe un om ca să se miște tot sistemul.</dd></div>
+      <div><dt>Ce se întâmplă în discuția gratuită?</dt><dd>Te ascult și îți spun sincer dacă programul ți se potrivește. Durează 30 de minute, online, fără nicio presiune.</dd></div>
+      <div><dt>Am mai încercat cărți și terapie. De ce ar merge acum?</dt><dd>Lucrăm pe ce faci zi de zi, cu pași mici, și sunt lângă tine când îți vine să renunți.</dd></div>
+      <div><dt>Problemele dispar după cele 6 săptămâni?</dt><dd>Sincer, nu promit asta. Când crești, rezolvi unele probleme și apar altele. Important e să ai un sistem pentru orice apare.</dd></div>
+      <div><dt>E terapie?</dt><dd>Este coaching și nu înlocuiește terapia sau consilierea de cuplu.</dd></div>
+    </dl>
+    <div class="safe">
+      <h3>Uneori ai nevoie de alt sprijin.</h3>
+      <p>Dacă în casă există violență, amenințări sau te simți în pericol, primul pas e siguranța ta.</p>
+      <ul>
+        <li><a href="tel:0800500333">0800 500 333</a><span>Linia gratuită pentru victimele violenței domestice.</span></li>
+        <li><a href="tel:112">112</a><span>În caz de urgență.</span></li>
+      </ul>
     </div>
   </section>
 </main>
 
 <footer class="end" aria-labelledby="end-t">
-  <h2 class="stmt" id="end-t">Hai să vorbim.</h2>
-  <a class="big" href="tel:+40745727583">0745 727 583</a>
-  <p class="big-l">Telefon și WhatsApp</p>
+  <h2 class="caps end-h" id="end-t"><span>Hai să</span> <span>vorbim.</span></h2>
+  <div class="end-ph">
+    <img src="assets/v5a-bleumarin-decupat-600.webp" srcset="assets/v5a-bleumarin-decupat-600.webp 600w, assets/v5a-bleumarin-decupat-900.webp 900w" sizes="(min-width:900px) 40vw, 118vw" alt="Marilena Avram, în picioare, cu mâinile împreunate, zâmbind" width="900" height="1599" loading="lazy">
+  </div>
+  <div class="end-tel">
+    <a class="big" href="tel:+40745727583" aria-label="0745 727 583"><span>0745</span> <span>727 583</span></a>
+    <p class="big-l">Telefon și WhatsApp</p>
+  </div>
   <div class="end-row">
     <p>Prima discuție durează 30 de minute, online, și este gratuită. Îmi scrii pe WhatsApp, alegem o oră și vedem dacă programul ți se potrivește.</p>
     <a class="pill" href="https://wa.me/40745727583?text=Bun%C4%83%2C%20Marilena!%20A%C8%99%20vrea%20s%C4%83%20program%C4%83m%20discu%C8%9Bia%20gratuit%C4%83%20de%2030%20de%20minute%20despre%20Laboratorul%20Familiei." target="_blank" rel="noopener">Programează discuția gratuită</a>
@@ -629,10 +791,15 @@ details p{margin:2px 0 14px;font-size:18px;max-width:32em}
   <video controls playsinline preload="none" poster="assets/radacini-poster-curat.jpg"><source src="assets/radacini.mp4" type="video/mp4"></video>
 </dialog>
 
+<dialog class="film-dlg lt-dlg" id="scris" aria-label="Scrisoarea mea către părinți">
+  <button class="dlg-x" type="button" data-close>Închide</button>
+  <img src="assets/scrisoare-carte.jpg" alt="Scrisoarea scrisă de mână a Marilenei către părinți, care începe cu „Dragă mamă/tată”" width="580" height="803" loading="lazy">
+</dialog>
+
 <script>
 (function(){
   var pill=document.querySelector('.fixed'),hero=document.querySelector('.hero'),end=document.querySelector('.end'),cards=document.querySelector('.cards');
-  var desk=window.matchMedia?window.matchMedia('(min-width:900px)'):{matches:false};
+  var still=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var heroIn=true,endIn=false,cardsIn=false,under=false,seen=new Set(),zones=new Set();
   function upd(){pill.classList.toggle('on',!heroIn&&!endIn&&!cardsIn&&!under&&seen.size===0&&zones.size===0);}
   if('IntersectionObserver' in window){
@@ -645,26 +812,42 @@ details p{margin:2px 0 14px;font-size:18px;max-width:32em}
     var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting)seen.add(x.target);else seen.delete(x.target);});upd();});
     Array.prototype.forEach.call(document.querySelectorAll('main .pill, .safe'),function(p){io.observe(p);});
   }else{heroIn=false;upd();}
-  /* hide the pill while the film link, the testimonial, the index or the statement would sit under it */
-  var keep=[].slice.call(document.querySelectorAll('.play, .voice figure, .idx-s, .gen-h')),keepDesk=[],tick=false;
+  /* hide the pill while the film link, the portrait and its story, the index, the statement, the six weeks, the testimonial text or the book's opening would sit under it */
+  var keep=[].slice.call(document.querySelectorAll('.play, .about, .idx-s, .gen-h, .o-six, .o-r, .vq, .vcap, .bk-open')),tick=false;
+  /* the book turns toward you as it comes up the screen */
+  var bk=document.querySelector('[data-book]');
+  function turn(h){
+    if(!bk||still)return;
+    var r=bk.getBoundingClientRect();
+    if(r.bottom<-200||r.top>h+200)return;
+    var p=Math.min(1,Math.max(0,(h-(r.top+r.height/2))/(h*.55)));
+    bk.style.setProperty('--ry',(46-24*p).toFixed(2)+'deg');
+  }
   function check(){
     tick=false;
-    var h=window.innerHeight,p=pill.getBoundingClientRect(),top=h-p.height-34,l=p.left-12,r=p.right+12,list=desk.matches?keep.concat(keepDesk):keep,v=false;
-    for(var i=0;i<list.length&&!v;i++){var b=list[i].getBoundingClientRect();v=b.bottom>top&&b.top<h&&b.right>l&&b.left<r;}
+    var h=window.innerHeight,p=pill.getBoundingClientRect(),top=h-p.height-34,l=p.left-12,r=p.right+12,v=false;
+    for(var i=0;i<keep.length&&!v;i++){var b=keep[i].getBoundingClientRect();v=b.bottom>top&&b.top<h&&b.right>l&&b.left<r;}
     if(v!==under){under=v;upd();}
+    turn(h);
   }
   window.addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(check);}},{passive:true});
   window.addEventListener('resize',check);
+  window.addEventListener('load',check);
   check();
-  var dlg=document.getElementById('film');
-  if(!dlg||typeof dlg.showModal!=='function')return;
-  var v=dlg.querySelector('video');
-  Array.prototype.forEach.call(document.querySelectorAll('[data-film]'),function(a){
-    a.addEventListener('click',function(ev){ev.preventDefault();dlg.showModal();var p=v.play();if(p&&p.catch)p.catch(function(){});});
-  });
-  dlg.querySelector('[data-close]').addEventListener('click',function(){dlg.close();});
-  dlg.addEventListener('click',function(ev){if(ev.target===dlg)dlg.close();});
-  dlg.addEventListener('close',function(){v.pause();});
+  /* the film and the letter open in a dialog; without dialog support the links open the file itself */
+  function wire(id,sel,onOpen){
+    var d=document.getElementById(id);
+    if(!d||typeof d.showModal!=='function')return null;
+    Array.prototype.forEach.call(document.querySelectorAll(sel),function(a){
+      a.addEventListener('click',function(ev){ev.preventDefault();d.showModal();if(onOpen)onOpen(d);});
+    });
+    d.querySelector('[data-close]').addEventListener('click',function(){d.close();});
+    d.addEventListener('click',function(ev){if(ev.target===d)d.close();});
+    return d;
+  }
+  var film=wire('film','[data-film]',function(d){var p=d.querySelector('video').play();if(p&&p.catch)p.catch(function(){});});
+  if(film)film.addEventListener('close',function(){film.querySelector('video').pause();});
+  wire('scris','[data-letter]');
 })();
 </script>
 </body>
