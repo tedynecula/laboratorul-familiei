@@ -135,21 +135,22 @@ section{scroll-margin-top:var(--nav)}
 .film span{display:block;margin-top:4px;font-size:15px;line-height:1.35}
 .film .go{margin-top:6px;font-weight:700;color:var(--t)}
 
-/* proof */
+/* proof: every testimonial stays visible at once, no slider and no "read more" */
 .proof{background:var(--bg);padding:var(--sec) 0}
+.proof .h2{margin-bottom:18px}
 .vrow{display:grid;gap:12px}
-.vrow:has(>.vc+.vc){grid-auto-flow:column;grid-auto-columns:88%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
-.vc{padding:24px 20px;border-radius:24px;background:var(--d);color:#fff;scroll-snap-align:start}
-.vpull{margin-bottom:16px;font-size:clamp(28px,7.6vw,52px);font-weight:700;letter-spacing:-.02em;line-height:1.06}
-.vq{font-size:16.5px;line-height:1.5;color:var(--bg)}
-.vmore{display:none;align-items:center;min-height:44px;margin-top:2px;padding:0;border:0;background:none;color:#fff;font:inherit;font-size:16px;font-weight:700;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
-.vcap{margin-top:14px;font-size:15px;line-height:1.35;color:var(--p)}
-.vcap b{display:block;font-size:17px;color:#fff}
+.vc{display:flex;flex-direction:column;padding:24px 20px 22px;border-radius:24px;background:var(--w)}
+.vc.dk{background:var(--d);color:#fff}
+.vtag{align-self:flex-start;display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border-radius:999px;background:var(--bg);font-size:14px;font-weight:700;color:var(--d)}
+.vc.dk .vtag{background:var(--t);color:#fff}
+.vpull{margin-top:14px;font-size:clamp(26px,7vw,34px);font-weight:800;letter-spacing:-.025em;line-height:1.08}
+.vq{margin-top:12px;font-size:16.5px;line-height:1.5}
+.vc.dk .vq{color:var(--bg)}
+.vcap{margin-top:auto;padding-top:16px;font-size:15px;line-height:1.35;color:var(--t)}
+.vc.dk .vcap{color:var(--p)}
+.vcap b{display:block;font-size:17px;color:var(--ink)}
+.vc.dk .vcap b{color:#fff}
 .pcta{margin-top:20px}
-@media(max-width:899px){
-  .vc[data-cl] .vmore{display:inline-flex}
-  .vc[data-cl="1"] .vq{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-}
 
 /* faq */
 .faq{background:var(--w);padding:var(--sec) 0}
@@ -191,9 +192,7 @@ section{scroll-margin-top:var(--nav)}
 .blab{font-size:14.5px;font-weight:700;color:var(--p)}
 .bh{margin-top:4px;font-size:32px}
 .bmeta{margin-top:6px;font-size:15.5px;line-height:1.4;color:var(--bg)}
-.bq{grid-column:1/-1}
-.bq p{font-size:20px;font-weight:700;letter-spacing:-.02em;line-height:1.3}
-.bq figcaption{margin-top:6px;font-size:15px;color:var(--p)}
+.bdesc{grid-column:1/-1;font-size:20px;font-weight:700;letter-spacing:-.02em;line-height:1.3}
 .bbtn{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px}
 .btw,.bto{flex:1 1 150px;display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 20px;border-radius:999px;font-size:16px;font-weight:700;text-decoration:none;white-space:nowrap;transition:background-color .2s ease}
 .btw{background:#fff;color:var(--d)}
@@ -269,10 +268,10 @@ section{scroll-margin-top:var(--nav)}
   .aturn{font-size:21px}
   .film{max-width:500px;grid-template-columns:92px minmax(0,1fr)}
 
-  .vc{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:start;padding:48px}
-  .vrow:has(>.vc+.vc){grid-auto-flow:row;grid-auto-columns:auto;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));overflow:visible}
-  .vrow:has(>.vc+.vc) .vc{display:block}
-  .vpull{margin:0}
+  .proof .h2{margin-bottom:28px}
+  .vrow{grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
+  .vc{padding:32px}
+  .vpull{font-size:clamp(30px,2.7vw,38px)}
   .vq{font-size:18px}
   .pcta{display:flex;align-items:center;gap:20px;margin-top:28px}
   .pcta .micro{margin-top:0}
@@ -298,7 +297,7 @@ section{scroll-margin-top:var(--nav)}
   .bk{grid-template-columns:150px minmax(0,1fr) minmax(0,1fr) auto;gap:0 48px}
   .bcov{width:150px}
   .bh{font-size:44px}
-  .bq,.bbtn{grid-column:auto}
+  .bdesc,.bbtn{grid-column:auto}
   .bbtn{flex-direction:column;flex-wrap:nowrap;min-width:230px}
   .btw,.bto{flex:none}
 
@@ -462,18 +461,38 @@ section{scroll-margin-top:var(--nav)}
     </div>
   </section>
 
+  <section class="book dk" id="cartea" aria-labelledby="book-t">
+    <div class="w bk">
+      <img class="bcov" src="assets/v5a-coperta-fata-600.jpg" srcset="assets/v5a-coperta-fata-600.jpg 600w, assets/v5a-coperta-fata-800.jpg 800w" sizes="150px" alt="Coperta cărții „Familia Ideală. Ghid de preparare în propriul laborator”, de Marilena Avram, Editura Createrra" width="600" height="882" loading="lazy">
+      <div>
+        <p class="blab">Și cartea mea</p>
+        <h2 class="dsp bh" id="book-t">Familia Ideală.</h2>
+        <p class="bmeta">Editura Createrra, 2025, tipărită sau eBook.</p>
+      </div>
+      <p class="bdesc">Pentru tine, dacă ai obosit să repeți tipare și să cauți vinovați.</p>
+      <div class="bbtn">
+        <a class="btw" href="https://wa.me/40745727583?text=Bun%C4%83%2C%20Marilena!%20A%C8%99%20vrea%20s%C4%83%20comand%20cartea%20%E2%80%9EFamilia%20Ideal%C4%83%E2%80%9D." target="_blank" rel="noopener">Comandă cartea</a>
+        <a class="bto" href="https://tinyurl.com/yckf2y2t" target="_blank" rel="noopener">Ia varianta eBook</a>
+      </div>
+    </div>
+  </section>
+
   <section class="proof" aria-labelledby="voice-t">
     <div class="w">
-      <h2 class="vh" id="voice-t">Iată ce spun alții.</h2>
-      <!-- More workshop quotes go here later, as further figure.vc cards inside .vrow. With two or more, the row swipes on phones and becomes a grid on desktop. -->
+      <h2 class="dsp h2" id="voice-t">Iată ce spun participanții și cititorii.</h2>
+      <!-- Every testimonial stays visible: one column on phones, a grid on desktop. Add more as further figure.vc cards: class "vc dk" for the program and the workshops, plain "vc" for the book. -->
       <div class="vrow">
-        <figure class="vc dk" id="vc1">
-          <p class="dsp vpull" aria-hidden="true">„Cum sunt eu în aceste relații?”</p>
-          <div>
-            <blockquote><p class="vq" id="vq1">„Am participat la workshop-ul Marilenei și am avut conștientizarea că pot să îmi iau responsabilitatea asupra relațiilor pe care le am cu familia, cu prietenii, cu oamenii din jurul meu, să ies din judecata că ei ar fi în «feluri și feluri» închipuite de mine, și să îmi pun întrebarea «Cum sunt eu în aceste relații?». De acolo am schimbat perspectiva, și în același timp, am restaurat relația cu oamenii dragi mie.”</p></blockquote>
-            <button class="vmore" type="button" aria-expanded="false" aria-controls="vq1">Citește tot</button>
-            <figcaption class="vcap"><b>Manole Andrei</b><span class="vh">, </span>participant la un atelier al Marilenei</figcaption>
-          </div>
+        <figure class="vc dk">
+          <p class="vtag">Despre atelier</p>
+          <p class="vpull" aria-hidden="true">„Cum sunt eu în aceste relații?”</p>
+          <blockquote><p class="vq">„Am participat la workshop-ul Marilenei și am avut conștientizarea că pot să îmi iau responsabilitatea asupra relațiilor pe care le am cu familia, cu prietenii, cu oamenii din jurul meu, să ies din judecata că ei ar fi în «feluri și feluri» închipuite de mine, și să îmi pun întrebarea «Cum sunt eu în aceste relații?». De acolo am schimbat perspectiva, și în același timp, am restaurat relația cu oamenii dragi mie.”</p></blockquote>
+          <figcaption class="vcap"><b>Manole Andrei</b><span class="vh">, </span>participant la un atelier al Marilenei</figcaption>
+        </figure>
+        <figure class="vc">
+          <p class="vtag">Despre carte</p>
+          <p class="vpull" aria-hidden="true">„Scrisă cu vulnerabilitate și autenticitate.”</p>
+          <blockquote><p class="vq">„Este o carte scrisă cu vulnerabilitate și autenticitate, ce îmbină povești de viață, reflecții profunde și exerciții practice. Autoarea te invită la asumare și recunoștință, propunând o schimbare de perspectivă fundamentală a felului în care privești familia și te raportezi la ea.”</p></blockquote>
+          <figcaption class="vcap"><b>Vlad Grigore</b><span class="vh">, </span>pe coperta cărții „Familia Ideală”</figcaption>
         </figure>
       </div>
       <div class="pcta">
@@ -519,24 +538,6 @@ section{scroll-margin-top:var(--nav)}
     </div>
   </section>
 
-  <section class="book dk" id="cartea" aria-labelledby="book-t">
-    <div class="w bk">
-      <img class="bcov" src="assets/v5a-coperta-fata-600.jpg" srcset="assets/v5a-coperta-fata-600.jpg 600w, assets/v5a-coperta-fata-800.jpg 800w" sizes="150px" alt="Coperta cărții „Familia Ideală. Ghid de preparare în propriul laborator”, de Marilena Avram, Editura Createrra" width="600" height="882" loading="lazy">
-      <div>
-        <p class="blab">Și cartea mea</p>
-        <h2 class="dsp bh" id="book-t">Familia Ideală.</h2>
-        <p class="bmeta">Editura Createrra, 2025, tipărită sau eBook.</p>
-      </div>
-      <figure class="bq">
-        <blockquote><p>„o carte scrisă cu vulnerabilitate și autenticitate”</p></blockquote>
-        <figcaption>Vlad Grigore</figcaption>
-      </figure>
-      <div class="bbtn">
-        <a class="btw" href="https://wa.me/40745727583?text=Bun%C4%83%2C%20Marilena!%20A%C8%99%20vrea%20s%C4%83%20comand%20cartea%20%E2%80%9EFamilia%20Ideal%C4%83%E2%80%9D." target="_blank" rel="noopener">Comandă cartea</a>
-        <a class="bto" href="https://tinyurl.com/yckf2y2t" target="_blank" rel="noopener">Ia varianta eBook</a>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer class="foot" id="subsol">
@@ -566,15 +567,7 @@ section{scroll-margin-top:var(--nav)}
   document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false);});
   document.addEventListener('click',function(e){if(nav.hasAttribute('data-open')&&!nav.contains(e.target))setMenu(false);});
 
-  /* the testimonial shows three lines on phones and opens in full; the whole text is always in the page */
-  var vc=document.getElementById('vc1');
-  if(vc){
-    var vb=vc.querySelector('.vmore');
-    vc.setAttribute('data-cl','1');
-    vb.addEventListener('click',function(){var open=vc.getAttribute('data-cl')==='1';vc.setAttribute('data-cl',open?'0':'1');vb.setAttribute('aria-expanded',open?'true':'false');vb.textContent=open?'Arată mai puțin':'Citește tot';});
-  }
-
-  /* phone bar: shows after the hero call, hides while any call on the page is in view, and over the final call, the book and the footer */
+  /* phone bar: shows after the hero call, hides while any call on the page is in view, and over the book, the final call and the footer */
   var bar=document.getElementById('bar'),bl=bar.querySelector('a');
   if('IntersectionObserver' in window){
     var hc=document.getElementById('hcta'),hide=[],below=true;
